@@ -83,11 +83,18 @@
 				<div class="col-twelve">
 
 					<h5>Hello, World.</h5>
-					<h1>I'm Adwa Najmi.</h1>
+					<h1><span id="typed"></span></h1>
 
-					<p class="intro-position">
-						<span>Software Developer</span>
-					</p>
+					<div class="typed-strings" style="display: none;">
+						<p>I'm Adwa Najmi </p>
+						<p>I'm a Programmer...</p>
+						<p>I'm a Laravel Developer...</p>
+						<p>I'm a Web System Developer...</p>
+						<p>I'm a Software Developer...</p>
+						<p>I'm a Software Programmer...</p>
+						<p>I'm a Software Engineer...</p>
+					</div>
+					<p>based in Kuala Lumpur, Malaysia.</p>
 
 					<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
 
@@ -180,24 +187,29 @@
 				<ul class="skill-bars">
 					<li>
 						<div class="progress percent90"><span>90%</span></div>
-						<strong>HTML5</strong>
+						<strong>Web Design</strong>
 					</li>
 					<li>
 						<div class="progress percent85"><span>85%</span></div>
-						<strong>CSS3</strong>
+						<strong>HTML/CSS</strong>
 					</li>
 					<li>
 						<div class="progress percent70"><span>70%</span></div>
-						<strong>JQuery</strong>
+						<strong>JavaScript / JQuery</strong>
 					</li>
 					<li>
-						<div class="progress percent95"><span>95%</span></div>
-						<strong>PHP</strong>
+						<div class="progress percent80"><span>80%</span></div>
+						<strong>PHP Laravel</strong>
 					</li>
 					<li>
 
-						<div class="progress percent75"><span>75%</span></div>
+						<div class="progress percent50"><span>50%</span></div>
 						<strong>Wordpress</strong>
+					</li>
+					<li>
+
+						<div class="progress percent70"><span>70%</span></div>
+						<strong>Bootstrap</strong>
 					</li>
 
 				</ul> <!-- /skill-bars -->
@@ -217,7 +229,7 @@
 					<div class="bgrid stat">
 
 						<div class="icon-part">
-							<i class="icon-pencil-ruler"></i>
+							<i class="fas fa-code fa-bounce"></i>
 						</div>
 
 						<h3 class="stat-count">
@@ -249,7 +261,7 @@
 					<div class="bgrid stat">
 
 						<div class="icon-part">
-							<i class="icon-clock"></i>
+							<i class="fas fa-calendar fa-bounce"></i>
 						</div>
 
 						<h3 class="stat-count">
@@ -269,10 +281,15 @@
 
 		<div class="row button-section">
 			<div class="col-twelve">
-				<a href="https://www.wasap.my/601121324249" title="Contact Me"
-					class="button stroke smoothscroll">Contact Me</a>
-				<a href="#" title="Download CV" class="button button-primary">Download CV</a>
+				<a href="https://www.wasap.my/601121324249" title="Contact Me" class="button stroke smoothscroll">
+					<i class="fab fa-whatsapp "></i> Contact Me
+				</a>
+
+				<a href="#" title="Download CV" class="button button-primary">
+					<i class="fas fa-download fa-bounce"></i> Download CV
+				</a>
 			</div>
+
 		</div>
 
 	</section> <!-- /stats -->
@@ -288,9 +305,6 @@
 
 				<h5>Resume</h5>
 				<h1>More of my credentials.</h1>
-
-				<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia
-					nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
 
 			</div>
 		</div> <!-- /section-intro-->
@@ -1117,25 +1131,28 @@
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
 
+	<!-- Add this script tag to include the Typed.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Initialize Typed.js
+			var options = {
+				stringsElement: '.typed-strings',
+				typeSpeed: 50, // typing speed in milliseconds
+				backSpeed: 25, // backspacing speed in milliseconds
+				backDelay: 2000, // delay before starting to backspace
+				startDelay: 500, // delay to start typing after initialization
+				loop: true, // loop the animation
+			};
+
+			var typed = new Typed('#typed', options);
+		});
+	</script>
+
 </body>
 
 
 
 </html>
-
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-	$(document).ready(function () {
-		var header = $(".new-top-bar");
-		var headerHeight = header.outerHeight();
-
-		// Scroll function to toggle fixed class
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > headerHeight) {
-				header.addClass("sticky-header");
-			} else {
-				header.removeClass("sticky-header");
-			}
-		});
-	});
-</script>
