@@ -38,6 +38,14 @@
 
 	<script src="https://kit.fontawesome.com/f2b831a8bf.js" crossorigin="anonymous"></script>
 
+	<!-- Owl Carousel CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+	<!-- Owl Carousel JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 
 </head>
 
@@ -134,7 +142,8 @@
 
 				<div class="intro-info">
 
-					<img src="images/adwa.webp" alt="Profile Picture">
+					<img class="img-fluid rounded-pill" src="images/adwa.webp" title="AdwaNajmi" alt=""
+						style="max-width: 250px">
 
 					<p> Im <b>Adwa Najmi,</b>a Software Engineer
 						who is seeking to find the opportunity to work
@@ -284,7 +293,7 @@
 				</a>
 
 				<a href="#" title="Download CV" class="button button-primary">
-					<i class="fas fa-download fa-bounce"></i> Download CV
+					<i class="fas fa-download fa-fade"></i> Download CV
 				</a>
 			</div>
 
@@ -600,7 +609,7 @@
 
 					<div class="bgrid folio-item">
 						<div class="item-wrap">
-							<img src="images/projects/tnb.jpeg" alt="Tnb">
+							<img src="images/projects/tnb.png" alt="Tnb">
 							<a href="#modal-03" class="overlay">
 								<div class="folio-item-table">
 									<div class="folio-item-cell">
@@ -665,7 +674,7 @@
 					<div class="bgrid folio-item">
 						<div class="item-wrap">
 							<img src="images/projects/rmk12.png" alt="Maiwp">
-							<a href="#modal-06" class="overlay">
+							<a href="#modal-07" class="overlay">
 								<div class="folio-item-table">
 									<div class="folio-item-cell">
 										<h3 class="folio-title">EPU eMas - RMK12</h3>
@@ -681,33 +690,53 @@
 	            ============================================================= -->
 					<div id="modal-01" class="popup-modal slider mfp-hide">
 
-						<div class="media">
-							<img src="images/portfolio/modals/m-liberty.jpg" alt="" />
+						<div class="media owl-carousel">
+							<div class="item">
+								<img class="img-fluid" alt="" src="images/projects/gogolf_home.png">
+							</div>
+							<div class="item">
+								<img class="img-fluid" alt="" src="images/projects/gogolf_main.png">
+							</div>
+							<div class="item">
+								<video width="500" height="800" controls>
+									<source src="/gogolf.mp4" type="video/mp4">
+									<source src="/gogolf.ogg" type="video/ogg">
+									Your browser does not support the video tag.
+								</video>
+							</div>
 						</div>
 
 						<div class="description-box">
-							<h4>Liberty</h4>
-							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-								auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+							<h4>Project Info:</h4>
+							<p>This project focuses on the golf club in Ampang which is Kelab Darul Ehsan so that their
+								services can run smoothly and
+								less time consuming. This system enables the user to give feedback much easier and
+								faster.​</p>
 
-							<div class="categories">Web Development</div>
+							<h4>Project Details:</h4>
+							<ul class="list-style-2 list-style-light text-white-50">
+								<li><span class="text-light font-weight-600 me-2">Client:</span>UNIKL Lecturers</li>
+								<li><span class="text-light font-weight-600 me-2">Technologies:</span>Ionic, Angular
+								</li>
+								<li><span class="text-light font-weight-600 me-2">Date:</span>January, 2020</li>
+							</ul>
 						</div>
 
 						<div class="link-box">
-							<a href="http://www.behance.net">Details</a>
+							<a href="https://www.unikl.edu.my/">Details</a>
 							<a href="#" class="popup-modal-dismiss">Close</a>
 						</div>
 
 					</div> <!-- /modal-01 -->
 
-					<div id="modal-02" class="popup-modal slider mfp-hide">
+					<!-- <div id="modal-02" class="popup-modal slider mfp-hide">
 
 						<div class="media">
 							<img src="images/portfolio/modals/m-shutterbug.jpg" alt="" />
 						</div>
 
 						<div class="description-box">
-							<h4>Shutterbug</h4>
+							<h4>Project Info:</h4>
 							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
 								auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
 
@@ -715,41 +744,49 @@
 						</div>
 
 						<div class="link-box">
-							<a href="http://www.behance.net">Details</a>
+							<a href="#">Details</a>
 							<a href="#" class="popup-modal-dismiss">Close</a>
 						</div>
 
-					</div> <!-- /modal-02 -->
+					</div>  -->
 
 					<div id="modal-03" class="popup-modal slider mfp-hide">
 
 						<div class="media">
-							<img src="images/portfolio/modals/m-clouds.jpg" alt="" />
+							<img src="images/projects/tnb.jpeg" alt="" />
 						</div>
 
 						<div class="description-box">
-							<h4>Clouds</h4>
-							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-								auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+							<h4>Project Info:</h4>
+							<p>Create and developed a website for TNB HQ
+								Department from scratch</p>
 
-							<div class="categories">Web Design</div>
+							<h4 class="text-4 font-weight-600 text-white mt-4">Project Details:</h4>
+							<ul class="list-style-2 list-style-light text-white-50">
+								<li><span class="text-light font-weight-600 me-2">Client:</span>TNB Headquarters</li>
+								<li><span class="text-light font-weight-600 me-2">Industry:</span>Government Agency</li>
+								<li><span class="text-light font-weight-600 me-2">Technologies:</span>Laravel, PHP,
+									JavaScript, jQuery, HTML , CSS
+								</li>
+								<li><span class="text-light font-weight-600 me-2">Date:</span>November, 2020</li>
+							</ul>
 						</div>
 
 						<div class="link-box">
-							<a href="http://www.behance.net">Details</a>
+							<a href="#">Details</a>
 							<a href="#" class="popup-modal-dismiss">Close</a>
 						</div>
 
 					</div> <!-- /modal-03 -->
 
-					<div id="modal-04" class="popup-modal slider mfp-hide">
+					<!-- <div id="modal-04" class="popup-modal slider mfp-hide">
 
 						<div class="media">
 							<img src="images/portfolio/modals/m-beetle.jpg" alt="" />
 						</div>
 
 						<div class="description-box">
-							<h4>Beetle</h4>
+							<h4>Project Info:</h4>
 							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
 								auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
 
@@ -757,28 +794,43 @@
 						</div>
 
 						<div class="link-box">
-							<a href="http://www.behance.net">Details</a>
+							<a href="#">Details</a>
 							<a href="#" class="popup-modal-dismiss">Close</a>
 						</div>
 
-					</div> <!-- /modal-04 -->
+					</div> -->
 
 					<div id="modal-05" class="popup-modal slider mfp-hide">
 
-						<div class="media">
-							<img src="images/portfolio/modals/m-lighthouse.jpg" alt="" />
+						<div class="media owl-carousel">
+							<div class="item">
+								<img class="img-fluid" alt="" src="images/projects/mbpj_login.png">
+							</div>
+							<div class="item">
+								<img class="img-fluid" alt="" src="images/projects/mbpj_home.png">
+							</div>
 						</div>
 
-						<div class="description-box">
-							<h4>Lighthouse</h4>
-							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-								auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
 
-							<div class="categories">Web Development</div>
+						<div class="description-box">
+							<h4 class="text-4 font-weight-600 text-white">Project Info:</h4>
+							<p class="text-white-50">Created a prototype website to show and
+								demonstrate to the client. This prototype is a simple CRUD system.​</p>
+							<h4 class="text-4 font-weight-600 text-white mt-4">Project Details:</h4>
+							<ul class="list-style-2 list-style-light text-white-50">
+								<li><span class="text-light font-weight-600 me-2">Client:</span>Majlis Bandaraya
+									Petaling Jaya </li>
+								<li><span class="text-light font-weight-600 me-2">Industry:</span>Government Agency</li>
+								<li><span class="text-light font-weight-600 me-2">Technologies:</span>Laravel, PHP,
+									JavaScript, jQuery, HTML , CSS
+								</li>
+								<li><span class="text-light font-weight-600 me-2">Date:</span>January, 2022</li>
+								<!-- <li><span class="text-light font-weight-600 me-2">URL:</span><a href="https://play.google.com/store/apps/details?id=com.jpj.jpj_info" target="_blank">https://play.google.com/store/apps/details?id=com.jpj.jpj_info</a></li> -->
+							</ul>
 						</div>
 
 						<div class="link-box">
-							<a href="http://www.behance.net">Details</a>
+							<a href="#">Details</a>
 							<a href="#" class="popup-modal-dismiss">Close</a>
 						</div>
 
@@ -786,20 +838,68 @@
 
 					<div id="modal-06" class="popup-modal slider mfp-hide">
 
-						<div class="media">
-							<img src="images/portfolio/modals/m-salad.jpg" alt="" />
+						<div class="media owl-carousel">
+							<div class="item">
+								<img class="img-fluid" alt="" src="images/projects/maiwp_login.png">
+							</div>
+							<div class="item">
+								<img class="img-fluid" alt="" src="images/projects/maiwp_main.png">
+							</div>
+
+							<div class="item">
+								<img class="img-fluid" alt="" src="images/projects/maiwp_home.png">
+							</div>
 						</div>
 
 						<div class="description-box">
-							<h4>Salad</h4>
-							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-								auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-
-							<div class="categories">Branding</div>
+							<h4 class="text-4 font-weight-600 text-white">Project Info:</h4>
+							<p class="text-white-50">Created a prototype website to show and
+								demonstrate to the client. This prototype is a simple CRUD system.​</p>
+							<h4 class="text-4 font-weight-600 text-white mt-4">Project Details:</h4>
+							<ul class="list-style-2 list-style-light text-white-50">
+								<li><span class="text-light font-weight-600 me-2">Client:</span>MAIWP</li>
+								<li><span class="text-light font-weight-600 me-2">Industry:</span>Government Agency</li>
+								<li><span class="text-light font-weight-600 me-2">Technologies:</span>Laravel, PHP,
+									JavaScript, jQuery, HTML , CSS
+								</li>
+								<li><span class="text-light font-weight-600 me-2">Date:</span>March, 2022</li>
+								<!-- <li><span class="text-light font-weight-600 me-2">URL:</span><a href="https://play.google.com/store/apps/details?id=com.jpj.jpj_info" target="_blank">https://play.google.com/store/apps/details?id=com.jpj.jpj_info</a></li> -->
+							</ul>
 						</div>
 
 						<div class="link-box">
-							<a href="http://www.behance.net">Details</a>
+							<a href="#">Details</a>
+							<a href="#" class="popup-modal-dismiss">Close</a>
+						</div>
+
+					</div> <!-- /modal-06 -->
+
+					<div id="modal-07" class="popup-modal slider mfp-hide">
+
+						<div class="media owl-carousel">
+							<div class="item"> <img class="img-fluid" alt="" src="images/projects/emas.png"> </div>
+							<div class="item"> <img class="img-fluid" alt="" src="images/projects/ppd.png"> </div>
+							<div class="item"> <img class="img-fluid" alt="" src="images/projects/ppdd.png"> </div>
+						</div>
+
+						<div class="description-box">
+							<h4 class="text-4 font-weight-600 text-white">Project Info:</h4>
+							<p class="text-white-50">Developed a website from scratch. Ensure that smallholders, EPU
+								staff and EPU subsidiary staff
+								receive appropriate training in line with the "Back to Basic" concept.</p>
+							<h4 class="text-4 font-weight-600 text-white mt-4">Project Details:</h4>
+							<ul class="list-style-2 list-style-light text-white-50">
+								<li><span class="text-light font-weight-600 me-2">Client:</span>EPU</li>
+								<li><span class="text-light font-weight-600 me-2">Industry:</span>Government Agency</li>
+								<li><span class="text-light font-weight-600 me-2">Technologies:</span>Laravel, PHP,
+									JavaScript, jQuery, HTML , CSS
+								</li>
+								<li><span class="text-light font-weight-600 me-2">Date:</span>January, 2023</li>
+							</ul>
+						</div>
+
+						<div class="link-box">
+							<a href="https://emas2.prototype.com.my/login">Details</a>
 							<a href="#" class="popup-modal-dismiss">Close</a>
 						</div>
 
@@ -831,9 +931,6 @@
 				<h5>Services</h5>
 				<h1>What Can I Do For You?</h1>
 
-				<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia
-					nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
-
 			</div>
 		</div> <!-- /section-intro -->
 
@@ -843,16 +940,17 @@
 
 				<div class="service">
 
-					<span class="icon"><i class="icon-earth"></i></span>
+					<span class="icon"><i class="fa-solid fa-laptop-code fa-beat"></i></span>
 
 					<div class="service-content">
 
-						<h3>Webdesign</h3>
+						<h3>Front-end Development</h3>
 
-						<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-							doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-							quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-							sit aspernatur aut odit aut fugit.
+						<p class="desc">I would usually use the basic from Laravel
+							which
+							is blade file, including HTML, CSS, and jQuery. I also have an
+							experience on
+							Angular framework
 						</p>
 
 					</div>
@@ -861,16 +959,14 @@
 
 				<div class="service">
 
-					<span class="icon"><i class="icon-window"></i></span>
+					<span class="icon"><i class="fa-solid fa-code fa-beat"></i></span>
 
 					<div class="service-content">
 
-						<h3>Web Development</h3>
+						<h3>Back-end Development</h3>
 
-						<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-							doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-							quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-							sit aspernatur aut odit aut fugit.
+						<p class="desc">I use PHP language in Laravel framework in most of my projects. At the same
+							time, I would love to try a new language too
 						</p>
 
 					</div>
@@ -879,16 +975,13 @@
 
 				<div class="service">
 
-					<span class="icon"><i class="icon-paint-brush"></i></span>
+					<span class="icon"><i class="fa-solid fa-mobile-retro fa-beat"></i></span>
 
 					<div class="service-content">
 
-						<h3>Branding</h3>
+						<h3>Mobile Development</h3>
 
-						<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-							doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-							quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-							sit aspernatur aut odit aut fugit.
+						<p class="desc">I have an experience working with Flutter and Ionic during my studies.
 						</p>
 
 					</div>
@@ -897,52 +990,14 @@
 
 				<div class="service">
 
-					<span class="icon"><i class="icon-toggles"></i></span>
+					<span class="icon"><i class="fa-solid fa-sitemap fa-beat"></i></span>
 
 					<div class="service-content">
 
-						<h3>UI/UX Design</h3>
+						<h3>Databases</h3>
 
-						<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-							doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-							quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-							sit aspernatur aut odit aut fugit.
-						</p>
-
-					</div>
-
-				</div> <!-- /service -->
-
-				<div class="service">
-
-					<span class="icon"><i class="icon-image"></i></span>
-
-					<div class="service-content">
-
-						<h3>Graphics Design</h3>
-
-						<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-							doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-							quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-							sit aspernatur aut odit aut fugit.
-						</p>
-
-					</div>
-
-				</div> <!-- /service -->
-
-				<div class="service">
-
-					<span class="icon"><i class="icon-chat"></i></span>
-
-					<div class="service-content">
-
-						<h3>Consultancy</h3>
-
-						<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-							doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-							quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-							sit aspernatur aut odit aut fugit.
+						<p class="desc">Currently Im only using MySQL database. However, I do have a basic experience on
+							Oracle and Firebase too
 						</p>
 
 					</div>
@@ -954,126 +1009,6 @@
 		</div> <!-- /services-content -->
 
 	</section> <!-- /services -->
-
-
-
-
-	<!-- contact
-   ================================================== -->
-	<section id="contact">
-
-		<div class="row section-intro">
-			<div class="col-twelve">
-
-				<h5>Contact</h5>
-				<h1>I'd Love To Hear From You.</h1>
-
-				<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia
-					nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
-
-			</div>
-		</div> <!-- /section-intro -->
-
-		<div class="row contact-form">
-
-			<div class="col-twelve">
-
-				<!-- form -->
-				<form name="contactForm" id="contactForm" method="post" action="">
-					<fieldset>
-
-						<div class="form-field">
-							<input name="contactName" type="text" id="contactName" placeholder="Name" value=""
-								minlength="2" required="">
-						</div>
-						<div class="form-field">
-							<input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value=""
-								required="">
-						</div>
-						<div class="form-field">
-							<input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
-						</div>
-						<div class="form-field">
-							<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10"
-								cols="50" required=""></textarea>
-						</div>
-						<div class="form-field">
-							<button class="submitform">Submit</button>
-							<div id="submit-loader">
-								<div class="text-loader">Sending...</div>
-								<div class="s-loader">
-									<div class="bounce1"></div>
-									<div class="bounce2"></div>
-									<div class="bounce3"></div>
-								</div>
-							</div>
-						</div>
-
-					</fieldset>
-				</form> <!-- Form End -->
-
-				<!-- contact-warning -->
-				<div id="message-warning">
-				</div>
-				<!-- contact-success -->
-				<div id="message-success">
-					<i class="fa fa-check"></i>Your message was sent, thank you!<br>
-				</div>
-
-			</div> <!-- /col-twelve -->
-
-		</div> <!-- /contact-form -->
-
-		<!-- <div class="row contact-info">
-
-			<div class="col-four tab-full">
-
-				<div class="icon">
-					<i class="icon-pin"></i>
-				</div>
-
-				<h5>Where to find me</h5>
-
-				<p>
-					1600 Amphitheatre Parkway<br>
-					Mountain View, CA<br>
-					94043 US
-				</p>
-
-			</div>
-
-			<div class="col-four tab-full collapse">
-
-				<div class="icon">
-					<i class="icon-mail"></i>
-				</div>
-
-				<h5>Email Me At</h5>
-
-				<p>someone@kardswebsite.com<br>
-					info@kardswebsite.com
-				</p>
-
-			</div>
-
-			<div class="col-four tab-full">
-
-				<div class="icon">
-					<i class="icon-phone"></i>
-				</div>
-
-				<h5>Call Me At</h5>
-
-				<p>Phone: (+63) 555 1212<br>
-					Mobile: (+63) 555 0100<br>
-					Fax: (+63) 555 0101
-				</p>
-
-			</div>
-
-		</div> -->
-
-	</section> <!-- /contact -->
 
 
 	<!-- footer
@@ -1148,6 +1083,22 @@
 			var typed = new Typed('#typed', options);
 		});
 	</script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			$(".media").owlCarousel({
+				items: 1,
+				loop: true,
+				margin: 10,
+				nav: true,
+				dots: false,
+				autoplay: true,
+				autoplayTimeout: 5000,
+				autoplayHoverPause: true,
+			});
+		});
+	</script>
+
 
 </body>
 
