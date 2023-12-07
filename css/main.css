@@ -1200,7 +1200,7 @@ header .top-bar {
 	top: 0;
 }
 header .logo {
-	float: left;
+	float: right;
 	margin-left: 20px;
 	margin-right: 50px;
 	margin-top: 25px;
@@ -1214,10 +1214,10 @@ header .logo a {
 	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
-	width: 92px;
-	height: 15px;
+	width: 150px; /* Adjusted width */
+	height: 30px; /* Adjusted height */
 	background: url("../images/logo.png") no-repeat center;
-	background-size: 92px 15px;
+	background-size: 100% 100%;
 }
 
 /**
@@ -2708,3 +2708,24 @@ footer .copyright span:last-child::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+/* CSS for the fixed header */
+.sticky-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transition: padding 0.3s ease; /* Smooth transition for padding */
+}
+
+/* Additional styling for the fixed top bar */
+.sticky-header .new-top-bar {
+	padding: 10px 0;
+}
+
+/* CSS for the regular (non-fixed) top bar */
+.new-top-bar {
+	transition: padding 0.3s ease; /* Smooth transition for padding */
+}
