@@ -2202,7 +2202,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #services {
-	background: #313131 url(../images/bg.jpg) no-repeat center;
+	background: #313131 url(../images/download4.jpeg) no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -2289,7 +2289,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #stats {
-	background: #990047;
+	background: #313131 url(../images/download5.jpeg) no-repeat center;
 	padding-top: 7.2rem;
 	padding-bottom: 6rem;
 	text-align: center;
