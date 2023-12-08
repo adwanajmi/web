@@ -1004,7 +1004,7 @@ input::-moz-focus-inner {
 }
 .skill-bars li {
 	height: 0.6rem;
-	background: #a1a1a1;
+	background: white;
 	width: 100%;
 	margin-bottom: 6rem;
 	padding: 0;
@@ -1015,14 +1015,14 @@ input::-moz-focus-inner {
 	left: 0;
 	top: -3rem;
 	font-family: "poppins-bold", sans-serif;
-	color: #313131;
+	color: white;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 	font-size: 1.5rem;
 	line-height: 2.4rem;
 }
 .skill-bars li .progress {
-	background: #313131;
+	background: red;
 	position: relative;
 	height: 100%;
 }
@@ -1035,7 +1035,7 @@ input::-moz-focus-inner {
 	color: white;
 	font-size: 1.1rem;
 	line-height: 1;
-	background: #313131;
+	background: black;
 	padding: 0.6rem 0.6rem;
 	border-radius: 3px;
 }
@@ -1134,7 +1134,7 @@ input::-moz-focus-inner {
 .section-intro h1 {
 	font-family: "poppins-semibold", serif;
 	font-size: 3.6rem;
-	color: #313131;
+	color: white;
 	line-height: 1.25;
 	margin-bottom: 1.2rem;
 }
@@ -1592,12 +1592,13 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #about {
-	background: #ffffff;
+	background: #151515 url(../images/download1.jpeg) no-repeat center bottom;
 	padding-top: 12rem;
 	padding-bottom: 15rem;
 }
 #about .section-intro {
 	margin-bottom: 3rem;
+	color: white;
 }
 
 .intro-info {
@@ -1622,12 +1623,14 @@ header .logo a {
 	text-align: left;
 	max-width: 850px;
 	margin-bottom: 3.6rem;
+	color: white;
 }
 .about-content h3 {
 	font-family: "poppins-bold", sans-serif;
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	letter-spacing: 0.25rem;
+	color: white;
 }
 .about-content .info-list {
 	list-style: none;
@@ -1639,7 +1642,7 @@ header .logo a {
 }
 .about-content .info-list li strong {
 	font-family: "poppins-bold", sans-serif;
-	color: #313131;
+	color: whitesmoke;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 	font-size: 1.5rem;
@@ -1648,7 +1651,7 @@ header .logo a {
 .about-content .info-list li span {
 	display: block;
 	font-family: "poppins-regular", sans-serif;
-	color: #888888;
+	color: white;
 	font-size: 1.5rem;
 	line-height: 1;
 }
@@ -1894,7 +1897,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #portfolio {
-	background: #ffffff;
+	background: black;
 	padding-top: 12rem;
 	padding-bottom: 12rem;
 }
