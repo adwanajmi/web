@@ -1897,7 +1897,9 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #portfolio {
-	background: black;
+	background: #151515 url(../images/download4.jpeg) no-repeat center bottom;
+
+	/* background: black; */
 	padding-top: 12rem;
 	padding-bottom: 12rem;
 }
@@ -2314,10 +2316,10 @@ header .logo a {
 	margin-top: 1.2rem;
 	margin-bottom: 0;
 	font-family: "poppins-medium", sans-serif;
-	color: white;
+	color: black;
 }
 #stats .stat-title {
-	color: rgba(255, 255, 255, 0.5);
+	color: black(255, 255, 255, 0.5);
 }
 
 /**
