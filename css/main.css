@@ -1,53 +1,53 @@
 /**
  * =================================================================== 
  *
- *  Kards v1.0 Main Stylesheet
- *  url: styleshout.com
- *  03-01-2016
- *  ------------------------------------------------------------------
- *  TOC:
- *  01. webfonts and iconfonts
- *  02. base style overrides
- *  03. typography & general theme styles
- *  04. preloader
- *  05. forms
- *  06. buttons 
- *  07. other components
- *  08. common styles
- *  09. header styles
- *  10. intro
- *  11. about
- *  12. resume
- *  13. portfolio
- *  14. call-to-action section
- *  15. services
- *  16. stats
- *  17. contact
- *  18. footer
+ * Kards v1.0 Main Stylesheet (MODERNIZED VERSION)
+ * Updated: 2025
+ * ------------------------------------------------------------------
+ * TOC:
+ * 01. webfonts and iconfonts
+ * 02. base style overrides
+ * 03. typography & general theme styles
+ * 04. preloader
+ * 05. forms
+ * 06. buttons 
+ * 07. other components
+ * 08. common styles
+ * 09. header styles
+ * 10. intro
+ * 11. about
+ * 12. resume
+ * 13. portfolio
+ * 14. call-to-action section
+ * 15. services
+ * 16. stats
+ * 17. contact
+ * 18. footer
  *
  * =================================================================== 
  */
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 01. webfonts and iconfonts - (_document-setup.scss)
  *
  * ------------------------------------------------------------------- 
  */
+/* --- NEW MODERN FONT IMPORT --- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 @import url("fonts.css");
 @import url("font-awesome/css/font-awesome.min.css");
 @import url("micons/micons.css");
 
-
-
-/** 
- * ===================================================================
+/** * ===================================================================
  * 02. base style overrides - (_document-setup.scss)
  *
  * ------------------------------------------------------------------- 
  */
 html {
 	font-size: 10px;
+	/* --- SMOOTH SCROLLING ENABLED --- */
+	scroll-behavior: smooth;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -71,11 +71,13 @@ body {
 	height: 100%;
 }
 body {
-	background: #151515;
-	font-family: "lora-regular", serif;
-	font-size: 1.7rem;
-	line-height: 3rem;
-	color: #6e6e6e;
+	background: #111111; /* Slightly darker for modern look */
+	/* --- UPDATED FONT TO INTER --- */
+	font-family: "Inter", sans-serif;
+	font-size: 1.6rem; /* Slightly smaller base for cleaner look */
+	line-height: 2.8rem;
+	color: #7a7a7a;
+	-webkit-font-smoothing: antialiased; /* Crisp text on Mac */
 }
 
 /**
@@ -98,8 +100,7 @@ a:active {
 	outline: 0;
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 03. typography & general theme styles - (_document-setup.scss)
  *
  * ------------------------------------------------------------------- 
@@ -116,11 +117,14 @@ h6,
 .h04,
 .h05,
 .h06 {
-	font-family: "poppins-semibold", sans-serif;
+	/* --- UPDATED HEADINGS TO INTER --- */
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	color: #313131;
 	font-style: normal;
 	text-rendering: optimizeLegibility;
 	margin-bottom: 2.1rem;
+	letter-spacing: -0.03rem; /* Tighter letter spacing is more modern */
 }
 h3,
 .h03,
@@ -132,7 +136,7 @@ h5,
 .h05,
 h6,
 .h06 {
-	font-family: "poppins-bold";
+	font-weight: 600;
 	margin-bottom: 1.2rem;
 }
 h1,
@@ -181,7 +185,8 @@ p img {
 	margin: 0;
 }
 p.lead {
-	font-family: "lora-regular", serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 300;
 	font-size: 2rem;
 	line-height: 1.8;
 	color: #888888;
@@ -198,15 +203,14 @@ b {
 	font-size: 1.7rem;
 	line-height: 3rem;
 	font-style: normal;
-	font-weight: normal;
 }
 em,
 i {
-	font-family: "lora-italic", serif;
+	font-style: italic;
 }
 strong,
 b {
-	font-family: "lora-bold", serif;
+	font-weight: 700;
 }
 small {
 	font-size: 1.2rem;
@@ -250,7 +254,8 @@ blockquote cite a:visited {
 	border: none;
 }
 abbr {
-	font-family: "poppins-bold", serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	font-variant: small-caps;
 	text-transform: lowercase;
 	letter-spacing: 0.05rem;
@@ -366,7 +371,7 @@ table {
 	border-width: 0;
 	width: 100%;
 	max-width: 100%;
-	font-family: "lora-regular", sans-serif;
+	font-family: "Inter", sans-serif;
 }
 th,
 td {
@@ -376,7 +381,7 @@ td {
 }
 th {
 	color: #313131;
-	font-family: "poppins-bold", sans-serif;
+	font-weight: 700;
 }
 td {
 	line-height: 1.5;
@@ -485,8 +490,7 @@ img.pull-left {
 	height: 6px;
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 04. preloader - (_preloader-1.scss)
  *
  * ------------------------------------------------------------------- 
@@ -549,8 +553,7 @@ img.pull-left {
 	}
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 05. forms - (_forms.scss)
  *
  * ------------------------------------------------------------------- 
@@ -574,7 +577,7 @@ select {
 	outline: none;
 	vertical-align: middle;
 	color: #313131;
-	font-family: "poppins-regular", sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 1.5rem;
 	line-height: 3rem;
 	max-width: 100%;
@@ -647,7 +650,8 @@ select:focus {
 }
 label,
 legend {
-	font-family: "poppins-bold", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	font-size: 1.4rem;
 	margin-bottom: 0.6rem;
 	color: #3b3b3b;
@@ -660,7 +664,7 @@ input[type="radio"] {
 label > .label-text {
 	display: inline-block;
 	margin-left: 1rem;
-	font-family: "poppins-regular", sans-serif;
+	font-family: "Inter", sans-serif;
 	line-height: inherit;
 }
 label > input[type="checkbox"],
@@ -690,8 +694,7 @@ label > input[type="radio"] {
 	color: #a1a1a1 !important;
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 06. buttons - (_button-essentials.scss)
  *
  * ------------------------------------------------------------------- 
@@ -703,13 +706,14 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
 	display: inline-block;
-	font-family: "poppins-bold", sans-serif;
-	font-size: 1.4rem;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
+	font-size: 1.3rem; /* Slightly reduced size */
 	text-transform: uppercase;
-	letter-spacing: 0.3rem;
+	letter-spacing: 0.1rem; /* More compact spacing */
 	height: 5.4rem;
 	line-height: 5.4rem;
-	padding: 0 3rem;
+	padding: 0 3.5rem;
 	margin: 0 0.3rem 1.2rem 0;
 	background: #d8d8d8;
 	color: #313131;
@@ -718,6 +722,9 @@ input[type="button"] {
 	text-align: center;
 	white-space: nowrap;
 	border: none;
+	/* --- ROUNDED BUTTONS & SHADOW --- */
+	border-radius: 50px;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
@@ -738,6 +745,9 @@ input[type="button"]:focus {
 	background: #bebebe;
 	color: #000000;
 	outline: 0;
+	/* --- HOVER LIFT EFFECT --- */
+	transform: translateY(-3px);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 .button.button-primary,
 a.button.button-primary,
@@ -781,8 +791,9 @@ button.large,
 button.stroke,
 .button.stroke {
 	background: transparent !important;
-	border: 3px solid #313131;
+	border: 2px solid #313131 !important; /* Thinner border */
 	line-height: 4.8rem;
+	box-shadow: none; /* No shadow on transparent buttons */
 }
 button.stroke.medium,
 .button.stroke.medium {
@@ -794,8 +805,9 @@ button.stroke.large,
 }
 button.stroke:hover,
 .button.stroke:hover {
-	border: 3px solid #ff0077;
+	border: 2px solid #ff0077 !important;
 	color: #ff0077;
+	background: rgba(255, 0, 119, 0.05) !important; /* Slight tint */
 }
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -803,8 +815,7 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 07. other components - (_others.scss)
  *
  * ------------------------------------------------------------------- 
@@ -819,7 +830,7 @@ input::-moz-focus-inner {
 	position: relative;
 	margin-bottom: 3rem;
 	border-radius: 3px;
-	font-family: "poppins-regular", sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 1.5rem;
 }
 .alert-box .close {
@@ -858,7 +869,8 @@ input::-moz-focus-inner {
 	margin: 0;
 	padding: 1.5rem 0.6rem 0 0;
 	font-size: 8.4rem;
-	font-family: "poppins-bold", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	line-height: 6rem;
 	text-indent: 0;
 	background: transparent;
@@ -908,17 +920,7 @@ input::-moz-focus-inner {
 	content: counter(definitions, decimal) ". ";
 }
 
-/** 
- * Pull Quotes
- * -----------
- * markup:
- *
- * <aside class="pull-quote">
- *		<blockquote>
- *			<p></p>
- *		</blockquote>
- *	</aside>
- *
+/** * Pull Quotes
  * --------------------------------------------------------------------- 
  */
 .pull-quote {
@@ -950,17 +952,7 @@ input::-moz-focus-inner {
 	content: none;
 }
 
-/** 
- * Stats Tab
- * ---------
- * markup:
- *
- * <ul class="stats-tabs">
- *		<li><a href="#">[value]<em>[name]</em></a></li>
- *	</ul>
- *
- * Extend this object into your markup.
- *
+/** * Stats Tab
  * ---------------------------------------------------------------------
  */
 .stats-tabs {
@@ -981,7 +973,8 @@ input::-moz-focus-inner {
 .stats-tabs li a {
 	display: inline-block;
 	font-size: 2.5rem;
-	font-family: "poppins-bold", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	border: none;
 	color: #252525;
 }
@@ -992,7 +985,7 @@ input::-moz-focus-inner {
 	display: block;
 	margin: 0.6rem 0 0 0;
 	font-size: 1.4rem;
-	font-family: "poppins-regular", sans-serif;
+	font-family: "Inter", sans-serif;
 	color: #888888;
 }
 
@@ -1016,7 +1009,8 @@ input::-moz-focus-inner {
 	position: absolute;
 	left: 0;
 	top: -3rem;
-	font-family: "poppins-bold", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	color: white;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
@@ -1033,7 +1027,7 @@ input::-moz-focus-inner {
 	right: 0;
 	top: -3.6rem;
 	display: block;
-	font-family: "poppins-regular", sans-serif;
+	font-family: "Inter", sans-serif;
 	color: white;
 	font-size: 1.1rem;
 	line-height: 1;
@@ -1113,8 +1107,7 @@ input::-moz-focus-inner {
 	width: 100%;
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 08. common styles (_layout.scss)
  *
  * ------------------------------------------------------------------- 
@@ -1134,7 +1127,8 @@ input::-moz-focus-inner {
 	position: relative;
 }
 .section-intro h1 {
-	font-family: "poppins-semibold", serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 600;
 	font-size: 3.6rem;
 	color: white;
 	line-height: 1.25;
@@ -1176,8 +1170,7 @@ input::-moz-focus-inner {
 	}
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 09. header styles - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
@@ -1216,8 +1209,8 @@ header .logo a {
 	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
-	width: 150px; /* Adjusted width */
-	height: 30px; /* Adjusted height */
+	width: 150px;
+	height: 30px;
 	background: url("../images/logo.png") no-repeat center;
 	background-size: 100% 100%;
 }
@@ -1321,7 +1314,8 @@ header .logo a {
 #main-nav-wrap {
 	display: block;
 	width: 100%;
-	font-family: "poppins-medium", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
 	font-size: 1.5rem;
 	position: absolute;
 	top: 100%;
@@ -1387,18 +1381,17 @@ header .logo a {
 	}
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 10. intro - (_layout.scss) 
  *
  * ------------------------------------------------------------------- 
  */
 #intro {
-	background: #151515 url(../images/adwad.jpg) no-repeat center bottom;
+	background: #151515 url(../images/japan.jpg) no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
-	background-attachment: scroll; /* Change fixed to scroll */
+	background-attachment: scroll;
 	width: 100%;
 	height: 100%;
 	min-height: 720px;
@@ -1413,8 +1406,11 @@ header .logo a {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #111111;
-	opacity: 0.85;
+	/* --- GLASSMORPHISM EFFECT --- */
+	background: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(1px);
+	opacity: 1;
 }
 
 .intro-content {
@@ -1427,7 +1423,8 @@ header .logo a {
 }
 .intro-content h1 {
 	color: #ffffff;
-	font-family: "poppins-medium", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	font-size: 8.4rem;
 	line-height: 1.071;
 	max-width: 900px;
@@ -1435,11 +1432,12 @@ header .logo a {
 	margin-bottom: 0.6rem;
 	margin-left: auto;
 	margin-right: auto;
-	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	text-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Stronger shadow */
 }
 .intro-content h5 {
 	color: #cc005f;
-	font-family: "poppins-bold", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	font-size: 2.3rem;
 	line-height: 1.565;
 	margin-bottom: 0;
@@ -1448,7 +1446,7 @@ header .logo a {
 	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .intro-content .intro-position {
-	font-family: "lora-regular", serif;
+	font-family: "Inter", sans-serif;
 	font-size: 1.7rem;
 	line-height: 2.4rem;
 	text-transform: uppercase;
@@ -1587,8 +1585,7 @@ header .logo a {
 	}
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 11. about - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
@@ -1609,15 +1606,24 @@ header .logo a {
 	margin-left: -30px;
 }
 .intro-info img {
-	height: 9rem;
-	width: 9rem;
+	height: 12rem; /* Made slightly bigger */
+	width: 12rem;
 	border-radius: 50%;
 	margin: 0.9rem 0 0 0;
 	float: left;
+	/* --- PROFILE PIC GLOW --- */
+	border: 3px solid #ffffff;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	transition: transform 0.3s ease;
 }
+/* Zoom effect on profile pic hover */
+.intro-info img:hover {
+	transform: scale(1.05);
+}
+
 .intro-info .lead {
 	text-align: left;
-	padding-left: 13rem;
+	padding-left: 15rem; /* Adjusted for bigger image */
 }
 
 .about-content {
@@ -1628,7 +1634,8 @@ header .logo a {
 	color: white;
 }
 .about-content h3 {
-	font-family: "poppins-bold", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	letter-spacing: 0.25rem;
@@ -1643,7 +1650,8 @@ header .logo a {
 	margin-bottom: 0.6rem;
 }
 .about-content .info-list li strong {
-	font-family: "poppins-bold", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	color: whitesmoke;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
@@ -1652,7 +1660,7 @@ header .logo a {
 }
 .about-content .info-list li span {
 	display: block;
-	font-family: "poppins-regular", sans-serif;
+	font-family: "Inter", sans-serif;
 	color: white;
 	font-size: 1.5rem;
 	line-height: 1;
@@ -1711,8 +1719,8 @@ header .logo a {
 		margin-top: 3rem;
 	}
 	.intro-info img {
-		height: 6.6rem;
-		width: 6.6rem;
+		height: 8rem;
+		width: 8rem;
 		float: none;
 		display: inline-block;
 	}
@@ -1722,8 +1730,7 @@ header .logo a {
 	}
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 12. resume - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
@@ -1791,7 +1798,7 @@ header .logo a {
 	margin-bottom: 0;
 }
 #resume .timeline-header p {
-	font-family: "poppins-regular", sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 1.6rem;
 	color: #888888;
 }
@@ -1892,8 +1899,7 @@ header .logo a {
 	}
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 13. portfolio - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
@@ -1961,7 +1967,7 @@ header .logo a {
 	margin: 0;
 	padding: 0;
 	text-transform: uppercase;
-	font-family: "poppins-regular", sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 1.2rem;
 	letter-spacing: 0.1rem;
 	color: rgba(255, 255, 255, 0.6);
@@ -2019,19 +2025,21 @@ header .logo a {
 	padding: 1.8rem 3.6rem 3rem;
 }
 .popup-modal .description-box h4 {
-	font-family: "poppins-bold", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	font-size: 1.5rem;
 	line-height: 2.4rem;
 	margin-bottom: 0.6rem;
 }
 .popup-modal .description-box p {
-	font-family: "poppins-regular", sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 1.4rem;
 	line-height: 2.4rem;
 	margin-bottom: 12px;
 }
 .popup-modal .categories {
-	font-family: "poppins-bold", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	font-size: 1.1rem;
 	line-height: 1.8rem;
 	text-transform: uppercase;
@@ -2046,7 +2054,8 @@ header .logo a {
 	background: #000000;
 }
 .popup-modal .link-box a {
-	font-family: "poppins-bold", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	font-size: 1.2rem;
 	line-height: 6rem;
 	color: #ffffff;
@@ -2131,8 +2140,7 @@ header .logo a {
 	transform: translateY(-100%);
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 14. call-to-action section - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
@@ -2199,8 +2207,7 @@ header .logo a {
 	}
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 15. services - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
@@ -2286,8 +2293,7 @@ header .logo a {
 	background: #ff0077;
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 16. stats - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
@@ -2317,7 +2323,8 @@ header .logo a {
 	font-size: 3.6rem;
 	margin-top: 1.2rem;
 	margin-bottom: 0;
-	font-family: "poppins-medium", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
 	color: black;
 }
 #stats .stat-title {
@@ -2352,8 +2359,7 @@ header .logo a {
 	}
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 17. contact - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
@@ -2410,7 +2416,8 @@ header .logo a {
 	clear: both;
 }
 #contact form .form-field label {
-	font-family: "poppins-bold", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	font-size: 1.1rem;
 	line-height: 2.4rem;
 	position: absolute;
@@ -2510,7 +2517,8 @@ header .logo a {
 }
 #submit-loader .text-loader {
 	display: none;
-	font-family: "poppins-bold", sans-serif;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
 	color: #ffffff;
 	letter-spacing: 0.3rem;
 	text-transform: uppercase;
@@ -2523,7 +2531,7 @@ header .logo a {
 }
 .contact-info {
 	margin: 4.8rem auto 0;
-	font-family: "poppins-regular", sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 1.5rem;
 	text-align: center;
 }
@@ -2600,8 +2608,7 @@ header .logo a {
 	}
 }
 
-/** 
- * ===================================================================
+/** * ===================================================================
  * 18. footer - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
@@ -2609,7 +2616,7 @@ header .logo a {
 footer {
 	padding-bottom: 3rem;
 	font-size: 1.4rem;
-	font-family: "poppins-regular", sans-serif;
+	font-family: "Inter", sans-serif;
 }
 footer a,
 footer a:visited {
