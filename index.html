@@ -183,7 +183,7 @@
 		</div>
 	</section>
 
-	<section id="portfolio" class="section-padding" style="background: #111;">
+	<section id="portfolio" class="section-padding" style="background:#111;">
 		<div class="container">
 			<div class="text-center">
 				<h5>Portfolio</h5>
@@ -194,8 +194,23 @@
 
 			<div class="portfolio-grid">
 
+				<!-- SWM -->
+				<div class="portfolio-card" onclick="openModal('modal-SWM')">
+					<div class="portfolio-img">
+						<img src="images/projects/SWM/Schedule/login.png">
+					</div>
+					<div class="portfolio-info">
+						<span class="portfolio-cat">Web App</span>
+						<h3>Southern Waste Management ( SWM )</h3>
+						<p>Internal system </p>
+					</div>
+				</div>
+
+				<!-- GOGOLF -->
 				<div class="portfolio-card" onclick="openModal('modal-gogolf')">
-					<div class="portfolio-img"><img src="images/projects/gogolf.png" alt="Gogolf"></div>
+					<div class="portfolio-img">
+						<img src="images/projects/Degree/Gogolf/gogolf.png">
+					</div>
 					<div class="portfolio-info">
 						<span class="portfolio-cat">Mobile App</span>
 						<h3>Gogolf</h3>
@@ -203,30 +218,75 @@
 					</div>
 				</div>
 
+				<!-- TNB -->
 				<div class="portfolio-card" onclick="openModal('modal-tnb')">
-					<div class="portfolio-img"><img src="images/projects/tnb.png" alt="TNB"></div>
+					<div class="portfolio-img">
+						<img src="images/projects/Degree/tnb.png">
+					</div>
 					<div class="portfolio-info">
-						<span class="portfolio-cat">Web Design</span>
+						<span class="portfolio-cat">Corporate System</span>
 						<h3>TNB Genco Academy</h3>
-						<p>Corporate LMS and internal portal.</p>
+						<p>Corporate LMS platform.</p>
 					</div>
 				</div>
 
+				<!-- MBPJ -->
 				<div class="portfolio-card" onclick="openModal('modal-mbpj')">
-					<div class="portfolio-img"><img src="images/projects/mbpj.jpeg" alt="MBPJ"></div>
+					<div class="portfolio-img">
+						<img src="images/projects/MBPJ/mbpj.jpeg">
+					</div>
 					<div class="portfolio-info">
 						<span class="portfolio-cat">Prototype</span>
 						<h3>MBPJ E-Sistem</h3>
-						<p>CRUD system prototype for client demo.</p>
+						<p>Municipal management prototype.</p>
 					</div>
 				</div>
 
+				<!-- MAIWP -->
 				<div class="portfolio-card" onclick="openModal('modal-maiwp')">
-					<div class="portfolio-img"><img src="images/projects/maiwp.jpeg" alt="MAIWP"></div>
+					<div class="portfolio-img">
+						<img src="images/projects/MAIWP/maiwp.jpeg">
+					</div>
 					<div class="portfolio-info">
 						<span class="portfolio-cat">Prototype</span>
 						<h3>MAIWP System</h3>
-						<p>Resource management prototype.</p>
+						<p>Resource management system.</p>
+					</div>
+				</div>
+
+				<!-- EMAS -->
+				<div class="portfolio-card" onclick="openModal('modal-emas')">
+					<div class="portfolio-img">
+						<img src="images/projects/eMAS/emas.png">
+					</div>
+					<div class="portfolio-info">
+						<span class="portfolio-cat">Government System</span>
+						<h3>eMAS RMK12</h3>
+						<p>Government reporting system.</p>
+					</div>
+				</div>
+
+				<!-- GYM -->
+				<div class="portfolio-card" onclick="openModal('modal-gym')">
+					<div class="portfolio-img">
+						<img src="images/projects/Diploma/gym.webp">
+					</div>
+					<div class="portfolio-info">
+						<span class="portfolio-cat">Diploma Project</span>
+						<h3>Gym Management</h3>
+						<p>Membership & attendance system.</p>
+					</div>
+				</div>
+
+				<!-- MM2H -->
+				<div class="portfolio-card" onclick="openModal('modal-mm2h')">
+					<div class="portfolio-img">
+						<img src="images/projects/Diploma/Internship/mm2h.png">
+					</div>
+					<div class="portfolio-info">
+						<span class="portfolio-cat">Diploma Internship</span>
+						<h3>Malaysia My Second Home</h3>
+						<p>Website Maintenance</p>
 					</div>
 				</div>
 
@@ -234,65 +294,141 @@
 		</div>
 	</section>
 
+	<!-- SWM -->
+	<div id="modal-SWM" class="modal-overlay">
+		<div class="modal-content">
+			<span class="modal-close" onclick="closeModal('modal-SWM')">&times;</span>
+			<img src="images/projects/SWM/Schedule/dashboard.png" class="modal-media">
+			<img src="images/projects/SWM/Schedule/login.png" class="modal-media">
+			<img src="images/projects/SWM/Schedule/schedule-dashboard.png" class="modal-media">
+			<img src="images/projects/SWM/Schedule/schedule-home.png" class="modal-media">
+			<img src="images/projects/SWM/Schedule/schedule_edit.png" class="modal-media">
+			<img src="images/projects/SWM/Schedule/image.png" class="modal-media">
+
+			<h2>Mirror System</h2>
+			<p>Schedule Management System.</p>
+			<ul>
+				<li><strong>Tech:</strong> Laravel PHP</li>
+				<li><strong>Year:</strong> 2023</li>
+			</ul>
+		</div>
+	</div>
+	<!-- GOGOLF -->
 	<div id="modal-gogolf" class="modal-overlay">
 		<div class="modal-content">
 			<span class="modal-close" onclick="closeModal('modal-gogolf')">&times;</span>
-			<img src="images/projects/gogolf_main.png" class="modal-media" alt="Gogolf Detail">
-			<h2>Gogolf | Mobile Application</h2>
-			<p>This project focuses on the golf club in Ampang (Kelab Darul Ehsan) so that their services can run
-				smoothly and less time consuming. This system enables the user to give feedback much easier and faster.
-			</p>
+			<img src="images/projects/Degree/Gogolf/gogolf.png" class="modal-media">
+			<img src="images/projects/Degree/Gogolf/gogolf_home.png" class="modal-media">
+			<img src="images/projects/Degree/Gogolf/gogolf_main.png" class="modal-media">
+			<video class="modal-media" autoplay muted loop playsinline>
+				<source src="images/projects/Degree/Gogolf/gogolf.mp4" type="video/mp4">
+			</video>
+			<h2>Gogolf</h2>
+			<p>Golf booking mobile application system.</p>
 			<ul>
-				<li><span>Client:</span> UNIKL Lecturers</li>
-				<li><span>Tech:</span> Ionic, Angular</li>
-				<li><span>Date:</span> January, 2020</li>
+				<li><strong>Tech:</strong> Ionic, Angular</li>
+				<li><strong>Year:</strong> 2020</li>
 			</ul>
 		</div>
 	</div>
 
+	<!-- TNB -->
 	<div id="modal-tnb" class="modal-overlay">
 		<div class="modal-content">
 			<span class="modal-close" onclick="closeModal('modal-tnb')">&times;</span>
-			<img src="images/projects/tnb.jpeg" class="modal-media" alt="TNB Detail">
+			<img src="images/projects/Degree/tnb.jpeg" class="modal-media">
+			<img src="images/projects/Degree/tnb.png" class="modal-media">
+
 			<h2>TNB Genco Academy</h2>
-			<p>Created and developed a website for TNB HQ Department from scratch.</p>
+			<p>Internal LMS for TNB Headquarters.</p>
 			<ul>
-				<li><span>Client:</span> TNB Headquarters</li>
-				<li><span>Tech:</span> Laravel, PHP, JS, jQuery</li>
-				<li><span>Date:</span> November, 2020</li>
+				<li><strong>Tech:</strong> Laravel, PHP</li>
+				<li><strong>Year:</strong> 2020</li>
 			</ul>
 		</div>
 	</div>
 
+	<!-- MBPJ -->
 	<div id="modal-mbpj" class="modal-overlay">
 		<div class="modal-content">
 			<span class="modal-close" onclick="closeModal('modal-mbpj')">&times;</span>
-			<img src="images/projects/mbpj_home.png" class="modal-media" alt="MBPJ Detail">
-			<h2>MBPJ - E-Sistem Kutipan</h2>
-			<p>Created a prototype website to show and demonstrate to the client. This prototype is a simple CRUD
-				system.</p>
+			<img src="images/projects/MBPJ/mbpj_home.png" class="modal-media">
+			<img src="images/projects/MBPJ/mbpj_login.png" class="modal-media">
+			<img src="images/projects/MBPJ/mbpj.jpeg" class="modal-media">
+
+			<h2>MBPJ E-Sistem</h2>
+			<p>Prototype municipal management system.</p>
 			<ul>
-				<li><span>Client:</span> Majlis Bandaraya Petaling Jaya</li>
-				<li><span>Tech:</span> Laravel, PHP, JS</li>
-				<li><span>Date:</span> January, 2022</li>
+				<li><strong>Tech:</strong> Laravel, PHP</li>
+				<li><strong>Year:</strong> 2022</li>
 			</ul>
 		</div>
 	</div>
 
+	<!-- MAIWP -->
 	<div id="modal-maiwp" class="modal-overlay">
 		<div class="modal-content">
 			<span class="modal-close" onclick="closeModal('modal-maiwp')">&times;</span>
-			<img src="images/projects/maiwp_main.png" class="modal-media" alt="MAIWP Detail">
-			<h2>MAIWP - Sistem Pengurusan Sumber</h2>
-			<p>Created a prototype website to show and demonstrate to the client. This prototype is a simple CRUD
-				system.</p>
+			<img src="images/projects/MAIWP/maiwp_home.png" class="modal-media">
+			<img src="images/projects/MAIWP/maiwp_login.png" class="modal-media">
+			<img src="images/projects/MAIWP/maiwp_main.png" class="modal-media">
+			<img src="images/projects/MAIWP/maiwp.webp" class="modal-media">
+
+			<h2>MAIWP System</h2>
+			<p>Resource management prototype system.</p>
 			<ul>
-				<li><span>Client:</span> MAIWP</li>
-				<li><span>Tech:</span> Laravel, PHP, JS</li>
-				<li><span>Date:</span> March, 2022</li>
+				<li><strong>Tech:</strong> Laravel, PHP</li>
+				<li><strong>Year:</strong> 2022</li>
 			</ul>
 		</div>
 	</div>
+
+	<!-- EMAS -->
+	<div id="modal-emas" class="modal-overlay">
+		<div class="modal-content">
+			<span class="modal-close" onclick="closeModal('modal-emas')">&times;</span>
+			<img src="images/projects/eMAS/emas.png" class="modal-media">
+			<img src="images/projects/eMAS/ppd.png" class="modal-media">
+			<img src="images/projects/eMAS/ppdd.png" class="modal-media">
+			<img src="images/projects/eMAS/rmk12.png" class="modal-media">
+			<h2>eMAS RMK12</h2>
+			<p>Government reporting & management system.</p>
+			<ul>
+				<li><strong>Tech:</strong> Laravel, PHP</li>
+				<li><strong>Year:</strong> 2022</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- GYM -->
+	<div id="modal-gym" class="modal-overlay">
+		<div class="modal-content">
+			<span class="modal-close" onclick="closeModal('modal-gym')">&times;</span>
+			<img src="images/projects/Diploma/gym.webp" class="modal-media">
+			<h2>Gym Management System</h2>
+			<p>Diploma project web system.</p>
+			<ul>
+				<li><strong>Tech:</strong> HTML, CSS</li>
+				<li><strong>Year:</strong> 2016</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- MM2H -->
+	<div id="modal-mm2h" class="modal-overlay">
+		<div class="modal-content">
+			<span class="modal-close" onclick="closeModal('modal-mm2h')">&times;</span>
+			<img src="images/projects/Diploma/Internship/mm2h.png" class="modal-media">
+			<h2>Malaysian Migrate 2 Home</h2>
+			<p>Diploma internship web maintenaince system.</p>
+			<ul>
+				<li><strong>Tech:</strong> Wordpress</li>
+				<li><strong>Year:</strong> 2016</li>
+			</ul>
+		</div>
+	</div>
+
+
 
 	<section id="services" class="section-padding">
 		<div class="container">
