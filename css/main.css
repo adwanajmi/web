@@ -493,21 +493,12 @@ section {
 #stats {
 	padding: 10rem 0;
 	background: var(--paper); /* remove this line */
-	background-image: url("../images/download.jpeg"); /* add this */
+	background-image: url("../images/bg.jpg"); /* add this */
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed; /* optional: parallax effect */
 	overflow: hidden;
 	position: relative;
-}
-
-/* Dark overlay so text stays readable */
-#stats::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: rgba(0, 0, 0, 0.5);
-	z-index: 0;
 }
 
 /* Lift content above the overlay */
@@ -553,6 +544,7 @@ section {
 	line-height: 1;
 	display: block;
 	margin-bottom: 1rem;
+	color: white;
 }
 .stat-label {
 	font-size: 1.2rem;
@@ -938,7 +930,7 @@ section {
 #services {
 	padding: 10rem 0;
 	background: var(--paper); /* remove this line */
-	background-image: url("../images/download1.jpeg"); /* add this */
+	background-image: url("../images/download3.jpeg"); /* add this */
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed; /* optional: parallax effect */
@@ -956,6 +948,7 @@ section {
 	color: var(--ink);
 	letter-spacing: -2px;
 	line-height: 0.95;
+	color: #fff;
 }
 .services-header .chapter-label {
 	color: var(--rust);
@@ -1010,6 +1003,7 @@ section {
 	color: var(--ink);
 	margin-bottom: 1.5rem;
 	font-weight: 700;
+	
 }
 .service-card p {
 	color: rgba(11, 11, 14, 0.55);
