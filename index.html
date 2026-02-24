@@ -1,668 +1,729 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>Adwa Najmi | Software Engineer</title>
-	<meta name="description"
-		content="Portfolio of Adwa Najmi, a Software Engineer and Laravel Developer based in Malaysia.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adwa Najmi — Software Engineer</title>
+  <meta name="description"
+    content="Portfolio of Adwa Najmi, a Software Engineer and Laravel Developer based in Malaysia.">
+  <link rel="icon" type="image/png" href="images/banner.png">
 
-	<link rel="stylesheet" href="css/main.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/f2b831a8bf.js" crossorigin="anonymous"></script>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-		rel="stylesheet">
-	<script src="https://kit.fontawesome.com/f2b831a8bf.js" crossorigin="anonymous"></script>
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
 
-	<link rel="icon" type="image/png" href="images/banner.png">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body id="top">
-
-	<header>
-		<div class="container nav-wrapper">
-			<div class="logo">
-				<a href="#top">Adwa.</a>
-			</div>
-			<div class="mobile-toggle"><i class="fas fa-bars"></i></div>
-
-			<nav class="main-nav">
-				<ul>
-					<li><a href="#intro">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#resume">Resume</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#services">Services</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-
-	<section id="intro">
-		<div class="hero-bg"></div>
-
-		<div class="container hero-content">
-			<h5>Hello, World.</h5>
-			<h1>I'm Adwa Najmi.<br>
-				<span style="color:var(--accent)" id="typed">Software Engineer</span>
-			</h1>
-			<p>Based in Kuala Lumpur, Malaysia. Specializing in Laravel & Web Systems.</p>
-
-			<div class="hero-buttons">
-				<a class="button primary" href="#portfolio">View Work</a>
-				<a class="button" href="#about">About Me</a>
-			</div>
-
-			<div class="social-links">
-				<a href="https://github.com/adwanajmi/" target="_blank"><i class="fab fa-github"></i></a>
-				<a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-				<a href="http://www.wasap.my/601121324249/" target="_blank"><i class="fab fa-whatsapp"></i></a>
-			</div>
-		</div>
-	</section>
-
-	<section id="about" class="section-padding">
-		<div class="container">
-			<div class="about-grid">
-				<div class="about-img">
-					<img src="images/Adwa.jpg" alt="Adwa Najmi" class="profile-pic">
-				</div>
-				<div class="about-text">
-					<h5>About Me</h5>
-					<h2>Building digital solutions.</h2>
-					<p>I'm <b>Adwa Najmi,</b> a Software Engineer based in Malaysia. I thrive in challenging
-						environments that push me to learn new technologies. I am dedicated to delivering high-quality
-						web solutions using Laravel, PHP, and modern web standards.</p>
-
-					<div class="skills-grid">
-						<div class="skill-item"><strong>Laravel/PHP</strong><span>Backend</span></div>
-						<div class="skill-item"><strong>HTML/CSS</strong><span>Frontend</span></div>
-						<div class="skill-item"><strong>JavaScript</strong><span>Interactive</span></div>
-						<div class="skill-item"><strong>MySQL</strong><span>Database</span></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="stats" class="section-padding">
-		<div class="container stats-grid">
-			<div class="stat-item">
-				<i class="fas fa-code fa-2x" style="color:#555; margin-bottom:10px;"></i>
-				<h3 class="stat-count" id="project-count">0</h3>
-				<p>Projects Completed</p>
-			</div>
-			<div class="stat-item">
-				<i class="fas fa-calendar fa-2x" style="color:#555; margin-bottom:10px;"></i>
-				<h3 class="stat-count" id="experience-count">0</h3>
-				<p>Months Experience</p>
-			</div>
-			<div class="stat-item">
-				<i class="fas fa-smile fa-2x" style="color:#555; margin-bottom:10px;"></i>
-				<h3 class="stat-count">3</h3>
-				<p>Happy Clients</p>
-			</div>
-		</div>
-	</section>
-
-	<section id="resume" class="section-padding">
-		<div class="container">
-			<div class="text-center">
-				<h5>Resume</h5>
-				<h2>My Work Experience</h2>
-			</div>
-			<br><br>
-
-			<div class="timeline">
-				<div class="timeline-item">
-					<span class="badge">Mar 2023 - Present</span>
-					<h3>Software Engineer</h3>
-					<h4>SWM Environment Sdn Bhd</h4>
-					<p>Assisted in the development and implementation of key systems for SWCorp Malaysia.</p>
-					<ul>
-						<li>Developed the <strong>Mirror System</strong> and <strong>Contractor Portal</strong>.</li>
-						<li>Debugged, enhanced, and maintained the <strong>IJadual System</strong> to ensure optimal
-							performance and reliability.</li>
-						<li>Conducted comprehensive manual testing to validate system functionality and quality.</li>
-						<li>Designed and executed test cases, documented defects, and verified fixes.</li>
-					</ul>
-				</div>
-
-				<div class="timeline-item">
-					<span class="badge">Jan 2022 - Feb 2023</span>
-					<h3>Software Developer</h3>
-					<h4>Pipeline Network Sdn Bhd</h4>
-					<p>Focused on rapid prototyping and government projects.</p>
-					<ul>
-						<li>Developed 2 prototype websites for client demonstration:
-							<ul>
-								<li>MBPJ Sistem Kutipan</li>
-								<li>MAIWP - Sistem Pengurusan Sumber</li>
-							</ul>
-						</li>
-						<li>Designed and executed the <strong>eMAS-RMK12</strong> project for a government website
-							utilizing the Laravel framework.</li>
-						<li>Demonstrated system flow structures to clients to ensure alignment before main development.
-						</li>
-					</ul>
-				</div>
-
-				<div class="timeline-item">
-					<span class="badge">Jan 2021 - May 2021</span>
-					<h3>IT Technical Sales Executive</h3>
-					<h4>Qowi Global Sdn Bhd</h4>
-					<ul>
-						<li>Sourcing tenders from the E-Perolehan System.</li>
-						<li>Meeting with clients virtually and during sales visits.</li>
-						<li>Demonstrating and presenting products; negotiating contracts and packages.</li>
-					</ul>
-				</div>
-
-				<div class="timeline-item">
-					<span class="badge">Mar 2020 - Nov 2020</span>
-					<h3>Web Developer Intern</h3>
-					<h4>TNB Headquarters</h4>
-					<ul>
-						<li>Developed a website for the <strong>Genco Academy Department</strong> using Laravel.</li>
-						<li>Created GUI functions to add users, departments, and manage learning systems.</li>
-						<li>Successfully improved technological capabilities by implementing advanced features.</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="text-center" style="margin-top: 4rem;">
-				<h3>Download Resume</h3>
-				<p>Select a year to download archived resumes.</p>
-				<div id="resume-container">
-					<p><i>Loading resumes from GitHub...</i></p>
-				</div>
-			</div>
-
-		</div>
-	</section>
-
-	<section id="portfolio" class="section-padding" style="background:#111;">
-		<div class="container">
-			<div class="text-center">
-				<h5>Portfolio</h5>
-				<h2>Recent Works</h2>
-				<p>Click on a card to view details.</p>
-			</div>
-			<br><br>
-
-			<div class="portfolio-grid">
-
-				<!-- SWM -->
-				<div class="portfolio-card" onclick="openModal('modal-SWM')">
-					<div class="portfolio-img">
-						<img src="images/projects/SWM/image.png">
-					</div>
-					<div class="portfolio-info">
-						<span class="portfolio-cat">Web App</span>
-						<h3>Southern Waste Management ( SWM )</h3>
-						<p>Internal system </p>
-					</div>
-				</div>
-
-				<!-- iJadual -->
-				<div class="portfolio-card" onclick="openModal('modal-iJadual')">
-					<div class="portfolio-img">
-						<img src="images/projects/SWM/iJadual/swcorp.png">
-					</div>
-					<div class="portfolio-info">
-						<span class="portfolio-cat">Web App</span>
-						<h3>iJadual SwCorp</h3>
-						<p>Internal system </p>
-					</div>
-				</div>
-
-				<!-- GOGOLF -->
-				<div class="portfolio-card" onclick="openModal('modal-gogolf')">
-					<div class="portfolio-img">
-						<img src="images/projects/Degree/Gogolf/gogolf.png">
-					</div>
-					<div class="portfolio-info">
-						<span class="portfolio-cat">Mobile App</span>
-						<h3>Gogolf</h3>
-						<p>Booking system for Kelab Darul Ehsan.</p>
-					</div>
-				</div>
-
-				<!-- TNB -->
-				<div class="portfolio-card" onclick="openModal('modal-tnb')">
-					<div class="portfolio-img">
-						<img src="images/projects/Degree/tnb.png">
-					</div>
-					<div class="portfolio-info">
-						<span class="portfolio-cat">Corporate System</span>
-						<h3>TNB Genco Academy</h3>
-						<p>Corporate LMS platform.</p>
-					</div>
-				</div>
-
-				<!-- MBPJ -->
-				<div class="portfolio-card" onclick="openModal('modal-mbpj')">
-					<div class="portfolio-img">
-						<img src="images/projects/MBPJ/mbpj.jpeg">
-					</div>
-					<div class="portfolio-info">
-						<span class="portfolio-cat">Prototype</span>
-						<h3>MBPJ E-Sistem</h3>
-						<p>Municipal management prototype.</p>
-					</div>
-				</div>
-
-				<!-- MAIWP -->
-				<div class="portfolio-card" onclick="openModal('modal-maiwp')">
-					<div class="portfolio-img">
-						<img src="images/projects/MAIWP/maiwp.jpeg">
-					</div>
-					<div class="portfolio-info">
-						<span class="portfolio-cat">Prototype</span>
-						<h3>MAIWP System</h3>
-						<p>Resource management system.</p>
-					</div>
-				</div>
-
-				<!-- EMAS -->
-				<div class="portfolio-card" onclick="openModal('modal-emas')">
-					<div class="portfolio-img">
-						<img src="images/projects/eMAS/emas.png">
-					</div>
-					<div class="portfolio-info">
-						<span class="portfolio-cat">Government System</span>
-						<h3>eMAS RMK12</h3>
-						<p>Government reporting system.</p>
-					</div>
-				</div>
-
-				<!-- GYM -->
-				<div class="portfolio-card" onclick="openModal('modal-gym')">
-					<div class="portfolio-img">
-						<img src="images/projects/Diploma/gym.webp">
-					</div>
-					<div class="portfolio-info">
-						<span class="portfolio-cat">Diploma Project</span>
-						<h3>Gym Management</h3>
-						<p>Membership & attendance system.</p>
-					</div>
-				</div>
-
-				<!-- MM2H -->
-				<div class="portfolio-card" onclick="openModal('modal-mm2h')">
-					<div class="portfolio-img">
-						<img src="images/projects/Diploma/Internship/mm2h.png">
-					</div>
-					<div class="portfolio-info">
-						<span class="portfolio-cat">Diploma Internship</span>
-						<h3>Malaysia My Second Home</h3>
-						<p>Website Maintenance</p>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-	<!-- SWM -->
-	<div id="modal-SWM" class="modal-overlay">
-		<div class="modal-content">
-			<span class="modal-close" onclick="closeModal('modal-SWM')">&times;</span>
-			<img src="images/projects/SWM/Schedule/dashboard.png" class="modal-media">
-			<img src="images/projects/SWM/Schedule/login.png" class="modal-media">
-			<img src="images/projects/SWM/Schedule/schedule-dashboard.png" class="modal-media">
-			<img src="images/projects/SWM/Schedule/schedule-home.png" class="modal-media">
-			<img src="images/projects/SWM/Schedule/schedule_edit.png" class="modal-media">
-			<img src="images/projects/SWM/Schedule/image.png" class="modal-media">
-
-			<h2>Mirror System</h2>
-			<p>Schedule Management System.</p>
-			<ul>
-				<li><strong>Tech:</strong> Laravel PHP</li>
-				<li><strong>Year:</strong> 2023</li>
-			</ul>
-		</div>
-	</div>
-
-	<!-- iJadual -->
-	<div id="modal-iJadual" class="modal-overlay">
-		<div class="modal-content">
-			<span class="modal-close" onclick="closeModal('modal-iJadual')">&times;</span>
-			<img src="images/projects/SWM/iJadual/image.png" class="modal-media">
-			<img src="images/projects/SWM/iJadual/images.png" class="modal-media">
-			<img src="images/projects/SWM/iJadual/login.png" class="modal-media">
-
-			<h2>Ijadual System</h2>
-			<p>Sistem Penjadualan Konsesi</p>
-			<ul>
-				<li><strong>Tech:</strong> Laravel PHP</li>
-				<li><strong>Year:</strong> 2023</li>
-			</ul>
-		</div>
-	</div>
-	<!-- GOGOLF -->
-	<div id="modal-gogolf" class="modal-overlay">
-		<div class="modal-content">
-			<span class="modal-close" onclick="closeModal('modal-gogolf')">&times;</span>
-			<img src="images/projects/Degree/Gogolf/gogolf.png" class="modal-media">
-			<img src="images/projects/Degree/Gogolf/gogolf_home.png" class="modal-media">
-			<img src="images/projects/Degree/Gogolf/gogolf_main.png" class="modal-media">
-			<video class="modal-media" autoplay muted loop playsinline>
-				<source src="images/projects/Degree/Gogolf/gogolf.mp4" type="video/mp4">
-			</video>
-			<h2>Gogolf</h2>
-			<p>Golf booking mobile application system.</p>
-			<ul>
-				<li><strong>Tech:</strong> Ionic, Angular</li>
-				<li><strong>Year:</strong> 2020</li>
-			</ul>
-		</div>
-	</div>
-
-	<!-- TNB -->
-	<div id="modal-tnb" class="modal-overlay">
-		<div class="modal-content">
-			<span class="modal-close" onclick="closeModal('modal-tnb')">&times;</span>
-			<img src="images/projects/Degree/tnb.jpeg" class="modal-media">
-			<img src="images/projects/Degree/tnb.png" class="modal-media">
-			<video class="modal-media" autoplay muted loop playsinline>
-				<source src="images/projects/Degree/tnb.mp4" type="video/mp4">
-			</video>
-
-			<h2>TNB Genco Academy</h2>
-			<p>Internal LMS for TNB Headquarters.</p>
-			<ul>
-				<li><strong>Tech:</strong> Laravel, PHP</li>
-				<li><strong>Year:</strong> 2020</li>
-			</ul>
-		</div>
-	</div>
-
-	<!-- MBPJ -->
-	<div id="modal-mbpj" class="modal-overlay">
-		<div class="modal-content">
-			<span class="modal-close" onclick="closeModal('modal-mbpj')">&times;</span>
-			<img src="images/projects/MBPJ/mbpj_home.png" class="modal-media">
-			<img src="images/projects/MBPJ/mbpj_login.png" class="modal-media">
-			<img src="images/projects/MBPJ/mbpj.jpeg" class="modal-media">
-
-			<h2>MBPJ E-Sistem</h2>
-			<p>Prototype municipal management system.</p>
-			<ul>
-				<li><strong>Tech:</strong> Laravel, PHP</li>
-				<li><strong>Year:</strong> 2022</li>
-			</ul>
-		</div>
-	</div>
-
-	<!-- MAIWP -->
-	<div id="modal-maiwp" class="modal-overlay">
-		<div class="modal-content">
-			<span class="modal-close" onclick="closeModal('modal-maiwp')">&times;</span>
-			<img src="images/projects/MAIWP/maiwp_home.png" class="modal-media">
-			<img src="images/projects/MAIWP/maiwp_login.png" class="modal-media">
-			<img src="images/projects/MAIWP/maiwp_main.png" class="modal-media">
-			<img src="images/projects/MAIWP/maiwp.webp" class="modal-media">
-
-			<h2>MAIWP System</h2>
-			<p>Resource management prototype system.</p>
-			<ul>
-				<li><strong>Tech:</strong> Laravel, PHP</li>
-				<li><strong>Year:</strong> 2022</li>
-			</ul>
-		</div>
-	</div>
-
-	<!-- EMAS -->
-	<div id="modal-emas" class="modal-overlay">
-		<div class="modal-content">
-			<span class="modal-close" onclick="closeModal('modal-emas')">&times;</span>
-			<img src="images/projects/eMAS/emas.png" class="modal-media">
-			<img src="images/projects/eMAS/ppd.png" class="modal-media">
-			<img src="images/projects/eMAS/ppdd.png" class="modal-media">
-			<img src="images/projects/eMAS/rmk12.png" class="modal-media">
-			<h2>eMAS RMK12</h2>
-			<p>Government reporting & management system.</p>
-			<ul>
-				<li><strong>Tech:</strong> Laravel, PHP</li>
-				<li><strong>Year:</strong> 2022</li>
-			</ul>
-		</div>
-	</div>
-
-	<!-- GYM -->
-	<div id="modal-gym" class="modal-overlay">
-		<div class="modal-content">
-			<span class="modal-close" onclick="closeModal('modal-gym')">&times;</span>
-			<img src="images/projects/Diploma/gym.webp" class="modal-media">
-			<h2>Gym Management System</h2>
-			<p>Diploma project web system.</p>
-			<ul>
-				<li><strong>Tech:</strong> HTML, CSS</li>
-				<li><strong>Year:</strong> 2016</li>
-			</ul>
-		</div>
-	</div>
-
-	<!-- MM2H -->
-	<div id="modal-mm2h" class="modal-overlay">
-		<div class="modal-content">
-			<span class="modal-close" onclick="closeModal('modal-mm2h')">&times;</span>
-			<img src="images/projects/Diploma/Internship/mm2h.png" class="modal-media">
-			<h2>Malaysian Migrate 2 Home</h2>
-			<p>Diploma internship web maintenaince system.</p>
-			<ul>
-				<li><strong>Tech:</strong> Wordpress</li>
-				<li><strong>Year:</strong> 2016</li>
-			</ul>
-		</div>
-	</div>
-
-
-
-	<section id="services" class="section-padding">
-		<div class="container">
-			<div class="text-center">
-				<h5>Services</h5>
-				<h2>What I Do</h2>
-			</div>
-			<br><br>
-			<div class="services-grid">
-				<div class="service-card">
-					<i class="fas fa-laptop-code"></i>
-					<h3>Frontend</h3>
-					<p>Responsive interfaces using Blade, HTML5, CSS3, and jQuery.</p>
-				</div>
-				<div class="service-card">
-					<i class="fas fa-server"></i>
-					<h3>Backend</h3>
-					<p>Robust logic and API development using PHP and Laravel Framework.</p>
-				</div>
-				<div class="service-card">
-					<i class="fas fa-database"></i>
-					<h3>Database</h3>
-					<p>Efficient data management using MySQL and Oracle.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<footer>
-		<div class="container">
-			<p>&copy; 2025 Adwa Najmi. All Rights Reserved.</p>
-			<div class="social-links" style="margin-top: 2rem;">
-				<a href="#top"><i class="fas fa-arrow-up"></i></a>
-			</div>
-		</div>
-	</footer>
-
-
-	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-	<script>
-		var typed = new Typed('#typed', {
-			strings: ['Software Engineer', 'Laravel Developer', 'Web Architect'],
-			typeSpeed: 50,
-			backSpeed: 50,
-			loop: true
-		});
-	</script>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-			// A. Experience Count
-			const startDate = new Date(2022, 0, 1); // Jan 2022
-			const currentDate = new Date();
-			let months = (currentDate.getFullYear() - startDate.getFullYear()) * 12;
-			months -= startDate.getMonth();
-			months += currentDate.getMonth();
-			document.getElementById('experience-count').innerText = months;
-
-			// B. Project Count (Counts the .portfolio-card divs)
-			const projectCount = document.querySelectorAll('.portfolio-card').length;
-			document.getElementById('project-count').innerText = projectCount;
-		});
-
-		// C. Modal Logic
-		function openModal(modalId) {
-			const modal = document.getElementById(modalId);
-			if (modal) {
-				modal.style.display = "flex";
-				document.body.style.overflow = "hidden";
-			}
-		}
-
-		function closeModal(modalId) {
-			const modal = document.getElementById(modalId);
-			if (modal) {
-				modal.style.display = "none";
-				document.body.style.overflow = "auto";
-			}
-		}
-
-		// Close modal if clicking outside the content box
-		window.onclick = function (event) {
-			if (event.target.classList.contains('modal-overlay')) {
-				event.target.style.display = "none";
-				document.body.style.overflow = "auto";
-			}
-		}
-	</script>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-			const repoOwner = "adwanajmi";
-			const repoName = "web";
-			const folderPath = "resumes";
-			const pdfName = "Adwa_Najmi_Resume.pdf";
-
-			fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${folderPath}`)
-				.then(response => response.json())
-				.then(data => {
-					const container = document.getElementById('resume-container');
-					container.innerHTML = "";
-
-					// Filter only folders
-					const years = data.filter(item => item.type === 'dir').reverse();
-
-					if (years.length === 0) {
-						container.innerHTML = "<p>No resumes found.</p>";
-						return;
-					}
-
-					// Generate HTML for Dropdown
-					let html = `
-                <div style="display:inline-block; position:relative; max-width:100%;">
-                    <select id="resume-selector" class="button" style="padding-right: 40px; margin-bottom: 0; background:#000; color:#fff;">
-                        ${years.map(year => `<option value="${year.name}">Resume (${year.name})</option>`).join('')}
-                    </select>
-                </div>
-                
-                <a id="resume-download-btn" href="#" class="button primary" target="_blank" style="margin-left: 10px;">
-                    <i class="fas fa-download"></i> Download
-                </a>
-            `;
-
-					container.innerHTML = html;
-
-					// Link Logic
-					const selector = document.getElementById('resume-selector');
-					const btn = document.getElementById('resume-download-btn');
-
-					function updateLink() {
-						const selectedYear = selector.value;
-						btn.href = `resumes/${selectedYear}/${pdfName}`;
-					}
-
-					updateLink();
-					selector.addEventListener('change', updateLink);
-				})
-				.catch(error => {
-					console.error('Error:', error);
-					document.getElementById('resume-container').innerHTML = '<p>Error loading resumes.</p>';
-				});
-		});
-	</script>
-
-	<!-- ================= HIGH-END IMMERSIVE UPGRADE ================= -->
-
-	<!-- Smooth Scroll Engine -->
-	<script src="https://unpkg.com/lenis@1.0.6/dist/lenis.min.js"></script>
-	<script>
-		const lenis = new Lenis({
-			duration: 1.3,
-			smoothWheel: true,
-			smoothTouch: false
-		});
-
-		function raf(time) {
-			lenis.raf(time);
-			requestAnimationFrame(raf);
-		}
-		requestAnimationFrame(raf);
-	</script>
-
-	<!-- Scroll Reveal -->
-	<script>
-		const sections = document.querySelectorAll("section");
-
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add("section-visible");
-					}
-				});
-			},
-			{ threshold: 0.12 }
-		);
-
-		sections.forEach(section => {
-			section.classList.add("section-hidden");
-			observer.observe(section);
-		});
-	</script>
-
-	<!-- Scroll Progress Bar -->
-	<script>
-		const progressBar = document.createElement("div");
-		progressBar.style.position = "fixed";
-		progressBar.style.top = "0";
-		progressBar.style.left = "0";
-		progressBar.style.height = "3px";
-		progressBar.style.background = "var(--accent)";
-		progressBar.style.zIndex = "9999";
-		progressBar.style.width = "0%";
-		document.body.appendChild(progressBar);
-
-		window.addEventListener("scroll", () => {
-			const scrollTop = window.scrollY;
-			const docHeight = document.body.scrollHeight - window.innerHeight;
-			const progress = (scrollTop / docHeight) * 100;
-			progressBar.style.width = progress + "%";
-		});
-	</script>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-line"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="nav-wrapper container" style="max-width:1400px">
+      <div class="logo"><a href="#top">Adwa Najmi.</a></div>
+      <div class="mobile-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="#intro">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Journey</a></li>
+          <li><a href="#portfolio">Work</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="intro">
+    <div class="hero-bg" id="heroBg">
+      <!-- Add or remove .hero-slide divs here to change photos -->
+      <div class="hero-slide active" style="background-image: url('images/AdwaJapan.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('images/pro.gif')"></div>
+      <div class="hero-slide" style="background-image: url('images/osaka.jpeg')"></div>
+      <div class="hero-slide" style="background-image: url('images/profile.GIF')"></div>
+
+    </div>
+    <div class="hero-noise"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Hello, World.</p>
+      <h1 class="hero-title">
+        Adwa<br><em>Najmi.</em>
+      </h1>
+      <p class="hero-sub">Software Engineer · Laravel Developer · Web Architect<br>Based in Kuala Lumpur, Malaysia</p>
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn btn-primary">View Work <i class="fas fa-arrow-right"></i></a>
+        <a href="#about" class="btn btn-outline">About Me</a>
+      </div>
+    </div>
+
+    <div class="hero-social">
+      <a href="https://github.com/adwanajmi/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="http://www.wasap.my/601121324249/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-hint-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-img-wrap" data-year="2025">
+          <img src="images/Adwa.jpg" alt="Adwa Najmi" class="profile-pic">
+          <div class="about-img-border"></div>
+        </div>
+        <div class="about-text">
+          <span class="chapter-label">Chapter One</span>
+          <h2>Building<br><em>digital solutions</em><br>since 2020.</h2>
+          <p>I'm <strong style="color:#fff">Adwa Najmi</strong>, a Software Engineer based in Malaysia who thrives in
+            challenging environments that push me to learn new technologies.</p>
+          <p>My craft is delivering high-quality web systems using Laravel, PHP, and modern web standards — from
+            government portals to enterprise platforms.</p>
+          <div class="skills-wrap">
+            <div class="skill-pill"><span class="skill-dot"></span><strong>Laravel / PHP</strong><span>Backend</span>
+            </div>
+            <div class="skill-pill"><span class="skill-dot"></span><strong>HTML / CSS</strong><span>Frontend</span>
+            </div>
+            <div class="skill-pill"><span class="skill-dot"></span><strong>JavaScript</strong><span>Interactive</span>
+            </div>
+            <div class="skill-pill"><span class="skill-dot"></span><strong>MySQL</strong><span>Database</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-cell">
+          <div class="stat-icon"><i class="fas fa-code"></i></div>
+          <span class="stat-num" id="project-count">0</span>
+          <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+          <span class="stat-num" id="experience-count">0</span>
+          <span class="stat-label">Months Experience</span>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-icon"><i class="fas fa-smile"></i></div>
+          <span class="stat-num">3</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESUME ===== -->
+  <section id="resume">
+    <div class="container">
+      <div class="resume-header">
+        <span class="chapter-label">Chapter Two</span>
+        <h2>The<br><em>Journey</em><br>so far.</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="tl-dot"></div>
+          <div class="tl-period">Mar 2023 — Present</div>
+          <h3 class="tl-role">Software Engineer</h3>
+          <div class="tl-company">SWM Environment Sdn Bhd</div>
+          <p class="tl-desc">Assisted in the development and implementation of key systems for SWCorp Malaysia.</p>
+          <ul class="tl-list">
+            <li>Developed the <strong>Mirror System</strong> and <strong>Contractor Portal</strong>.</li>
+            <li>Debugged, enhanced, and maintained the <strong>iJadual System</strong>.</li>
+            <li>Conducted comprehensive manual testing, documented defects, and verified fixes.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-dot"></div>
+          <div class="tl-period">Jan 2022 — Feb 2023</div>
+          <h3 class="tl-role">Software Developer</h3>
+          <div class="tl-company">Pipeline Network Sdn Bhd</div>
+          <p class="tl-desc">Focused on rapid prototyping and government projects.</p>
+          <ul class="tl-list">
+            <li>Developed 2 prototype websites: MBPJ Sistem Kutipan & MAIWP Sistem Pengurusan Sumber.</li>
+            <li>Designed and executed the <strong>eMAS-RMK12</strong> government project in Laravel.</li>
+            <li>Demonstrated system flow structures to clients before main development.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-dot"></div>
+          <div class="tl-period">Jan 2021 — May 2021</div>
+          <h3 class="tl-role">IT Technical Sales Executive</h3>
+          <div class="tl-company">Qowi Global Sdn Bhd</div>
+          <ul class="tl-list">
+            <li>Sourced tenders from the E-Perolehan System.</li>
+            <li>Met with clients for sales visits and virtual demos.</li>
+            <li>Negotiated contracts and presented product packages.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-dot"></div>
+          <div class="tl-period">Mar 2020 — Nov 2020</div>
+          <h3 class="tl-role">Web Developer Intern</h3>
+          <div class="tl-company">TNB Headquarters</div>
+          <ul class="tl-list">
+            <li>Developed a website for the <strong>Genco Academy Department</strong> using Laravel.</li>
+            <li>Created GUI functions to manage users, departments, and learning systems.</li>
+            <li>Implemented advanced features to improve technological capabilities.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="resume-download">
+        <div>
+          <h3>Download Resume</h3>
+          <p>Select a year to download an archived version.</p>
+        </div>
+        <div id="resume-container">
+          <p style="color:var(--mist); font-style:italic; font-size:1.4rem;">Loading resumes...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO ===== -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="portfolio-intro">
+        <div>
+          <span class="chapter-label">Chapter Three</span>
+          <h2>Selected<br><em>Works.</em></h2>
+        </div>
+        <p>Click any card to explore the project details.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card" onclick="openModal('modal-SWM')">
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="portfolio-img"><img src="images/projects/SWM/image.png" alt="SWM"></div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">Web App</span>
+            <h3>Southern Waste Management (SWM)</h3>
+            <p>Internal system & contractor portal.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openModal('modal-iJadual')">
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="portfolio-img"><img src="images/projects/SWM/iJadual/swcorp.png" alt="iJadual"></div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">Web App</span>
+            <h3>iJadual SwCorp</h3>
+            <p>Scheduling system for SWCorp Malaysia.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openModal('modal-gogolf')">
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="portfolio-img"><img src="images/projects/Degree/Gogolf/gogolf.png" alt="Gogolf"></div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">Mobile App</span>
+            <h3>Gogolf</h3>
+            <p>Booking system for Kelab Darul Ehsan.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openModal('modal-tnb')">
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="portfolio-img"><img src="images/projects/Degree/tnb.png" alt="TNB"></div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">Corporate System</span>
+            <h3>TNB Genco Academy</h3>
+            <p>Corporate LMS platform.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openModal('modal-mbpj')">
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="portfolio-img"><img src="images/projects/MBPJ/mbpj.jpeg" alt="MBPJ"></div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">Prototype</span>
+            <h3>MBPJ E-Sistem</h3>
+            <p>Municipal management prototype.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openModal('modal-maiwp')">
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="portfolio-img"><img src="images/projects/MAIWP/maiwp.jpeg" alt="MAIWP"></div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">Prototype</span>
+            <h3>MAIWP System</h3>
+            <p>Resource management system.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openModal('modal-emas')">
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="portfolio-img"><img src="images/projects/eMAS/emas.png" alt="eMAS"></div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">Government System</span>
+            <h3>eMAS RMK12</h3>
+            <p>Government reporting system.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openModal('modal-gym')">
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="portfolio-img"><img src="images/projects/Diploma/gym.webp" alt="Gym"></div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">Diploma Project</span>
+            <h3>Gym Management</h3>
+            <p>Membership & attendance system.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openModal('modal-mm2h')">
+          <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="portfolio-img"><img src="images/projects/Diploma/Internship/mm2h.png" alt="MM2H"></div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">Diploma Internship</span>
+            <h3>Malaysia My Second Home</h3>
+            <p>Website Maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODALS ===== -->
+
+  <!-- SWM -->
+  <div id="modal-SWM" class="modal-overlay">
+    <div class="modal-content"><span class="modal-close" onclick="closeModal('modal-SWM')">&times;</span>
+      <img src="images/projects/SWM/Schedule/dashboard.png" class="modal-media">
+      <img src="images/projects/SWM/Schedule/login.png" class="modal-media">
+      <img src="images/projects/SWM/Schedule/schedule-dashboard.png" class="modal-media">
+      <img src="images/projects/SWM/Schedule/schedule-home.png" class="modal-media">
+      <img src="images/projects/SWM/Schedule/schedule_edit.png" class="modal-media">
+      <img src="images/projects/SWM/Schedule/image.png" class="modal-media">
+      <h2>Mirror System</h2>
+      <p>Schedule Management System.</p>
+      <ul>
+        <li><strong>Tech:</strong> Laravel PHP</li>
+        <li><strong>Year:</strong> 2023</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- iJadual -->
+  <div id="modal-iJadual" class="modal-overlay">
+    <div class="modal-content"><span class="modal-close" onclick="closeModal('modal-iJadual')">&times;</span>
+      <img src="images/projects/SWM/iJadual/image.png" class="modal-media">
+      <img src="images/projects/SWM/iJadual/images.png" class="modal-media">
+      <img src="images/projects/SWM/iJadual/login.png" class="modal-media">
+      <h2>Ijadual System</h2>
+      <p>Sistem Penjadualan Konsesi</p>
+      <ul>
+        <li><strong>Tech:</strong> Laravel PHP</li>
+        <li><strong>Year:</strong> 2023</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- GOGOLF -->
+  <div id="modal-gogolf" class="modal-overlay">
+    <div class="modal-content"><span class="modal-close" onclick="closeModal('modal-gogolf')">&times;</span>
+      <img src="images/projects/Degree/Gogolf/gogolf.png" class="modal-media">
+      <img src="images/projects/Degree/Gogolf/gogolf_home.png" class="modal-media">
+      <img src="images/projects/Degree/Gogolf/gogolf_main.png" class="modal-media">
+      <video class="modal-media" autoplay muted loop playsinline>
+        <source src="images/projects/Degree/Gogolf/gogolf.mp4" type="video/mp4">
+      </video>
+      <h2>Gogolf</h2>
+      <p>Golf booking mobile application system.</p>
+      <ul>
+        <li><strong>Tech:</strong> Ionic, Angular</li>
+        <li><strong>Year:</strong> 2020</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TNB -->
+  <div id="modal-tnb" class="modal-overlay">
+    <div class="modal-content"><span class="modal-close" onclick="closeModal('modal-tnb')">&times;</span>
+      <img src="images/projects/Degree/tnb.jpeg" class="modal-media">
+      <img src="images/projects/Degree/tnb.png" class="modal-media">
+      <video class="modal-media" autoplay muted loop playsinline>
+        <source src="images/projects/Degree/tnb.mp4" type="video/mp4">
+      </video>
+      <h2>TNB Genco Academy</h2>
+      <p>Internal LMS for TNB Headquarters.</p>
+      <ul>
+        <li><strong>Tech:</strong> Laravel, PHP</li>
+        <li><strong>Year:</strong> 2020</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MBPJ -->
+  <div id="modal-mbpj" class="modal-overlay">
+    <div class="modal-content"><span class="modal-close" onclick="closeModal('modal-mbpj')">&times;</span>
+      <img src="images/projects/MBPJ/mbpj_home.png" class="modal-media">
+      <img src="images/projects/MBPJ/mbpj_login.png" class="modal-media">
+      <img src="images/projects/MBPJ/mbpj.jpeg" class="modal-media">
+      <h2>MBPJ E-Sistem</h2>
+      <p>Prototype municipal management system.</p>
+      <ul>
+        <li><strong>Tech:</strong> Laravel, PHP</li>
+        <li><strong>Year:</strong> 2022</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MAIWP -->
+  <div id="modal-maiwp" class="modal-overlay">
+    <div class="modal-content"><span class="modal-close" onclick="closeModal('modal-maiwp')">&times;</span>
+      <img src="images/projects/MAIWP/maiwp_home.png" class="modal-media">
+      <img src="images/projects/MAIWP/maiwp_login.png" class="modal-media">
+      <img src="images/projects/MAIWP/maiwp_main.png" class="modal-media">
+      <img src="images/projects/MAIWP/maiwp.webp" class="modal-media">
+      <h2>MAIWP System</h2>
+      <p>Resource management prototype system.</p>
+      <ul>
+        <li><strong>Tech:</strong> Laravel, PHP</li>
+        <li><strong>Year:</strong> 2022</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- EMAS -->
+  <div id="modal-emas" class="modal-overlay">
+    <div class="modal-content"><span class="modal-close" onclick="closeModal('modal-emas')">&times;</span>
+      <img src="images/projects/eMAS/emas.png" class="modal-media">
+      <img src="images/projects/eMAS/ppd.png" class="modal-media">
+      <img src="images/projects/eMAS/ppdd.png" class="modal-media">
+      <img src="images/projects/eMAS/rmk12.png" class="modal-media">
+      <h2>eMAS RMK12</h2>
+      <p>Government reporting & management system.</p>
+      <ul>
+        <li><strong>Tech:</strong> Laravel, PHP</li>
+        <li><strong>Year:</strong> 2022</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- GYM -->
+  <div id="modal-gym" class="modal-overlay">
+    <div class="modal-content"><span class="modal-close" onclick="closeModal('modal-gym')">&times;</span>
+      <img src="images/projects/Diploma/gym.webp" class="modal-media">
+      <h2>Gym Management System</h2>
+      <p>Diploma project web system.</p>
+      <ul>
+        <li><strong>Tech:</strong> HTML, CSS</li>
+        <li><strong>Year:</strong> 2016</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MM2H -->
+  <div id="modal-mm2h" class="modal-overlay">
+    <div class="modal-content"><span class="modal-close" onclick="closeModal('modal-mm2h')">&times;</span>
+      <img src="images/projects/Diploma/Internship/mm2h.png" class="modal-media">
+      <h2>Malaysian Migrate 2 Home</h2>
+      <p>Diploma internship web maintenance system.</p>
+      <ul>
+        <li><strong>Tech:</strong> WordPress</li>
+        <li><strong>Year:</strong> 2016</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header">
+        <span class="chapter-label" style="color:var(--rust)">Chapter Four</span>
+        <h2>What<br><em>I Do.</em></h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="svc-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Frontend</h3>
+          <p>Responsive, polished interfaces using Blade, HTML5, CSS3, and jQuery. Pixel-perfect execution from design.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="svc-icon"><i class="fas fa-server"></i></div>
+          <h3>Backend</h3>
+          <p>Robust logic and RESTful API development using PHP and the Laravel Framework. Scalable and maintainable.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="svc-icon"><i class="fas fa-database"></i></div>
+          <h3>Database</h3>
+          <p>Efficient, well-structured data management using MySQL and Oracle. Performance-tuned queries and schemas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <a href="#top" class="footer-logo">Adwa Najmi.</a>
+      <div class="footer-links">
+        <a href="https://github.com/adwanajmi/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="http://www.wasap.my/601121324249/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p>&copy; 2025 Adwa Najmi. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+  <!-- =========================================================
+       SCRIPTS
+  ========================================================= -->
+  <script>
+    // ---- CUSTOM CURSOR ----
+    const cursor = document.getElementById('cursor');
+    const cursorRing = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      gsap.to(cursor, { x: mx, y: my, duration: 0.05 });
+    });
+
+    function lerpRing() {
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      cursorRing.style.left = rx + 'px';
+      cursorRing.style.top = ry + 'px';
+      requestAnimationFrame(lerpRing);
+    }
+    lerpRing();
+
+    document.querySelectorAll('a, button, .portfolio-card, .service-card').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        gsap.to(cursor, { scale: 2.5, duration: 0.3 });
+        gsap.to(cursorRing, { scale: 1.5, opacity: 0.5, duration: 0.3 });
+      });
+      el.addEventListener('mouseleave', () => {
+        gsap.to(cursor, { scale: 1, duration: 0.3 });
+        gsap.to(cursorRing, { scale: 1, opacity: 1, duration: 0.3 });
+      });
+    });
+  </script>
+
+  <script>
+    // ---- GSAP INIT ----
+    gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+    // ---- SCROLL PROGRESS BAR ----
+    gsap.to('#scroll-line', {
+      width: '100%',
+      ease: 'none',
+      scrollTrigger: { trigger: 'body', start: 'top top', end: 'bottom bottom', scrub: true }
+    });
+
+    // ---- HERO PARALLAX ----
+    gsap.to('#heroBg', {
+      yPercent: 30,
+      ease: 'none',
+      scrollTrigger: { trigger: '#intro', start: 'top top', end: 'bottom top', scrub: true }
+    });
+
+    // ---- HERO SLIDESHOW ----
+    const slides = document.querySelectorAll('.hero-slide');
+    if (slides.length > 1) {
+      let current = 0;
+      setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 3000); // change photo every 5 seconds
+    }
+
+    // ---- HERO ENTRANCE ----
+    // Set initial hidden states via GSAP (not CSS) so content is always visible without JS
+    gsap.set('.hero-eyebrow', { opacity: 0, y: 20 });
+    gsap.set('.hero-title', { opacity: 0, y: 60 });
+    gsap.set('.hero-sub', { opacity: 0, y: 20 });
+    gsap.set('.hero-cta', { opacity: 0, y: 20 });
+    gsap.set('.hero-social', { opacity: 0 });
+    gsap.set('.scroll-hint', { opacity: 0 });
+
+    const heroTl = gsap.timeline({ delay: 0.3 });
+    heroTl
+      .to('.hero-eyebrow', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' })
+      .to('.hero-title', { opacity: 1, y: 0, duration: 1.2, ease: 'power4.out' }, '-=0.5')
+      .to('.hero-sub', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+      .to('.hero-cta', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.5')
+      .to('.hero-social', { opacity: 1, duration: 0.8 }, '-=0.4')
+      .to('.scroll-hint', { opacity: 1, duration: 0.8 }, '-=0.4');
+
+    // ---- ABOUT SECTION ----
+    gsap.from('.about-img-wrap', {
+      opacity: 0, x: -80, duration: 1.2, ease: 'power3.out',
+      scrollTrigger: { trigger: '#about', start: 'top 75%', toggleActions: 'play none none none' }
+    });
+    gsap.from('.about-text > *', {
+      opacity: 0, y: 40, stagger: 0.15, duration: 1, ease: 'power3.out',
+      scrollTrigger: { trigger: '#about', start: 'top 70%', toggleActions: 'play none none none' }
+    });
+
+    // ---- STATS COUNT-UP ----
+    ScrollTrigger.create({
+      trigger: '#stats',
+      start: 'top 80%',
+      once: true,
+      onEnter: () => {
+        const startDate = new Date(2022, 0, 1);
+        const now = new Date();
+        const months = (now.getFullYear() - startDate.getFullYear()) * 12 - startDate.getMonth() + now.getMonth();
+        const projectCount = document.querySelectorAll('.portfolio-card').length;
+
+        function countUp(elId, target, duration) {
+          const el = document.getElementById(elId);
+          if (!el) return;
+          const start = Date.now();
+          const tick = () => {
+            const elapsed = Date.now() - start;
+            const progress = Math.min(elapsed / duration, 1);
+            el.textContent = Math.round(progress * target);
+            if (progress < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        }
+
+        countUp('project-count', projectCount, 1800);
+        countUp('experience-count', months, 1800);
+
+        gsap.from('.stat-cell', {
+          opacity: 0, y: 40, stagger: 0.15, duration: 0.9, ease: 'power3.out'
+        });
+      }
+    });
+
+    // ---- TIMELINE ITEMS ----
+    document.querySelectorAll('.timeline-item').forEach((item, i) => {
+      gsap.to(item, {
+        opacity: 1, x: 0, duration: 0.9, ease: 'power3.out', delay: i * 0.1,
+        scrollTrigger: { trigger: item, start: 'top 80%', toggleActions: 'play none none none' }
+      });
+    });
+
+    // ---- PORTFOLIO CARDS ----
+    gsap.from('.portfolio-card', {
+      opacity: 0, y: 60, stagger: 0.1, duration: 0.8, ease: 'power3.out',
+      scrollTrigger: { trigger: '.portfolio-grid', start: 'top 80%', toggleActions: 'play none none none' }
+    });
+
+    // ---- SERVICE CARDS ----
+    gsap.from('.service-card', {
+      opacity: 0, y: 50, stagger: 0.15, duration: 0.8, ease: 'power3.out',
+      scrollTrigger: { trigger: '.services-grid', start: 'top 80%', toggleActions: 'play none none none' }
+    });
+
+    // ---- FOOTER ----
+    gsap.from('footer > .container > *', {
+      opacity: 0, y: 30, stagger: 0.15, duration: 0.8, ease: 'power3.out',
+      scrollTrigger: { trigger: 'footer', start: 'top 85%', toggleActions: 'play none none none' }
+    });
+  </script>
+
+  <script>
+    // ---- MODAL ----
+    function openModal(id) {
+      const m = document.getElementById(id);
+      if (!m) return;
+      m.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      gsap.from(m.querySelector('.modal-content'), { opacity: 0, y: 40, scale: 0.97, duration: 0.4, ease: 'power3.out' });
+    }
+    function closeModal(id) {
+      const m = document.getElementById(id);
+      if (!m) return;
+      gsap.to(m.querySelector('.modal-content'), {
+        opacity: 0, y: 20, scale: 0.97, duration: 0.25, ease: 'power2.in',
+        onComplete: () => { m.style.display = 'none'; document.body.style.overflow = 'auto'; }
+      });
+    }
+    window.addEventListener('click', e => {
+      if (e.target.classList.contains('modal-overlay')) {
+        closeModal(e.target.id);
+      }
+    });
+
+    // ---- STATS fallback (pre-scroll) ----
+    document.addEventListener('DOMContentLoaded', () => {
+      const projectCount = document.querySelectorAll('.portfolio-card').length;
+      document.getElementById('project-count').textContent = projectCount;
+      const startDate = new Date(2022, 0, 1);
+      const now = new Date();
+      const months = (now.getFullYear() - startDate.getFullYear()) * 12 - startDate.getMonth() + now.getMonth();
+      document.getElementById('experience-count').textContent = months;
+    });
+
+    // ---- MOBILE NAV ----
+    document.getElementById('menuToggle').addEventListener('click', () => {
+      const nav = document.getElementById('mainNav');
+      nav.classList.toggle('open');
+    });
+    document.querySelectorAll('.main-nav a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('mainNav').classList.remove('open'));
+    });
+
+    // ---- RESUME FROM GITHUB ----
+    document.addEventListener('DOMContentLoaded', () => {
+      const repoOwner = 'adwanajmi', repoName = 'web', folderPath = 'resumes', pdfName = 'Adwa_Najmi_Resume.pdf';
+      fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${folderPath}`)
+        .then(r => r.json())
+        .then(data => {
+          const container = document.getElementById('resume-container');
+          const years = data.filter(i => i.type === 'dir').reverse();
+          if (!years.length) { container.innerHTML = '<p style="color:var(--mist)">No resumes found.</p>'; return; }
+          container.innerHTML = `
+            <select id="resume-selector">
+              ${years.map(y => `<option value="${y.name}">Resume (${y.name})</option>`).join('')}
+            </select>
+            <a id="resume-download-btn" href="#" class="btn btn-primary" target="_blank">
+              <i class="fas fa-download"></i> Download
+            </a>`;
+          const sel = document.getElementById('resume-selector');
+          const btn = document.getElementById('resume-download-btn');
+          const update = () => { btn.href = `resumes/${sel.value}/${pdfName}`; };
+          update();
+          sel.addEventListener('change', update);
+        })
+        .catch(() => {
+          document.getElementById('resume-container').innerHTML = '<p style="color:var(--mist)">Could not load resumes.</p>';
+        });
+    });
+  </script>
 
 </body>
 
