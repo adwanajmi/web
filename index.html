@@ -91,7 +91,7 @@
   <section id="about">
     <div class="container">
       <div class="about-layout">
-        <div class="about-img-wrap" data-year="2025">
+        <div class="about-img-wrap" data-year="2026">
           <img src="images/Adwa.jpg" alt="Adwa Najmi" class="profile-pic">
           <div class="about-img-border"></div>
         </div>
@@ -100,7 +100,7 @@
           <h2>Building<br><em>digital solutions</em><br>since 2020.</h2>
           <p>I'm <strong style="color:#fff">Adwa Najmi</strong>, a Software Engineer based in Malaysia who thrives in
             challenging environments that push me to learn new technologies.</p>
-          <p>My craft is delivering high-quality web systems using Laravel, PHP, and modern web standards — from
+          <p>My craft is delivering high quality web systems using Laravel, PHP, and modern web standards from
             government portals to enterprise platforms.</p>
           <div class="skills-wrap">
             <div class="skill-pill"><span class="skill-dot"></span><strong>Laravel / PHP</strong><span>Backend</span>
@@ -489,6 +489,27 @@
     </div>
   </section>
 
+  <div id="resume-modal" style="
+    display:none;
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+  ">
+    <div style="width:80%; height:90%; background:#000; position:relative;">
+      <span onclick="closeResumeModal()" style="
+        position:absolute;
+        top:10px; right:20px;
+        color:#fff; font-size:30px; cursor:pointer;
+      ">&times;</span>
+
+      <iframe id="resume-frame" style="width:100%; height:100%; border:none;"></iframe>
+    </div>
+  </div>
+
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
@@ -498,7 +519,7 @@
         <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         <a href="http://www.wasap.my/601121324249/" target="_blank"><i class="fab fa-whatsapp"></i></a>
       </div>
-      <p>&copy; 2025 Adwa Najmi. All Rights Reserved.</p>
+      <p>&copy; 2026 Adwa Najmi. All Rights Reserved.</p>
     </div>
   </footer>
 
@@ -689,40 +710,100 @@
     });
 
     // ---- MOBILE NAV ----
-    document.getElementById('menuToggle').addEventListener('click', () => {
-      const nav = document.getElementById('mainNav');
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    const icon = menuToggle.querySelector('i');
+
+    menuToggle.addEventListener('click', () => {
       nav.classList.toggle('open');
+
+      // toggle icon
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
     });
-    document.querySelectorAll('.main-nav a').forEach(a => {
-      a.addEventListener('click', () => document.getElementById('mainNav').classList.remove('open'));
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+        nav.classList.remove('open');
+        menuToggle.classList.remove('active');
+      }
     });
 
     // ---- RESUME FROM GITHUB ----
     document.addEventListener('DOMContentLoaded', () => {
-      const repoOwner = 'adwanajmi', repoName = 'web', folderPath = 'resumes', pdfName = 'Adwa_Najmi_Resume.pdf';
+      const repoOwner = 'adwanajmi';
+      const repoName = 'web';
+      const folderPath = 'resumes';
+
+      const container = document.getElementById('resume-container');
+
       fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${folderPath}`)
-        .then(r => r.json())
+        .then(res => res.json())
         .then(data => {
-          const container = document.getElementById('resume-container');
-          const years = data.filter(i => i.type === 'dir').reverse();
-          if (!years.length) { container.innerHTML = '<p style="color:var(--mist)">No resumes found.</p>'; return; }
+          const years = data.filter(item => item.type === 'dir')
+            .map(item => item.name)
+            .sort((a, b) => b - a); // latest first
+
+          if (!years.length) {
+            container.innerHTML = '<p>No resumes found.</p>';
+            return;
+          }
+
+          // Auto select latest
+          const latestYear = years[0];
+
           container.innerHTML = `
-            <select id="resume-selector">
-              ${years.map(y => `<option value="${y.name}">Resume (${y.name})</option>`).join('')}
-            </select>
-            <a id="resume-download-btn" href="#" class="btn btn-primary" target="_blank">
-              <i class="fas fa-download"></i> Download
-            </a>`;
-          const sel = document.getElementById('resume-selector');
-          const btn = document.getElementById('resume-download-btn');
-          const update = () => { btn.href = `resumes/${sel.value}/${pdfName}`; };
+        <select id="resume-selector">
+          ${years.map(y => `<option value="${y}">${y}</option>`).join('')}
+        </select>
+
+        <button id="preview-btn" class="btn btn-outline">Preview</button>
+
+        <a id="download-btn" class="btn btn-primary" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+      `;
+
+          const selector = document.getElementById('resume-selector');
+          const downloadBtn = document.getElementById('download-btn');
+          const previewBtn = document.getElementById('preview-btn');
+
+          function getUrl(year) {
+            return `https://cdn.jsdelivr.net/gh/${repoOwner}/${repoName}@main/resumes/${year}/resume.pdf`;
+          }
+
+          function update() {
+            const year = selector.value;
+            downloadBtn.href = getUrl(year);
+          }
+
+          // Default load latest
+          selector.value = latestYear;
           update();
-          sel.addEventListener('change', update);
+
+          selector.addEventListener('change', update);
+
+          // Preview modal
+          previewBtn.addEventListener('click', () => {
+            const year = selector.value;
+            openResumeModal(getUrl(year));
+          });
         })
         .catch(() => {
-          document.getElementById('resume-container').innerHTML = '<p style="color:var(--mist)">Could not load resumes.</p>';
+          container.innerHTML = '<p>Failed to load resumes.</p>';
         });
     });
+
+    function openResumeModal(url) {
+      document.getElementById('resume-frame').src = url;
+      document.getElementById('resume-modal').style.display = 'flex';
+    }
+
+    function closeResumeModal() {
+      document.getElementById('resume-modal').style.display = 'none';
+      document.getElementById('resume-frame').src = '';
+    }
   </script>
 
 </body>

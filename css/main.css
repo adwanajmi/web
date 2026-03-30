@@ -62,7 +62,10 @@ img {
 	pointer-events: none;
 	z-index: 99999;
 	transform: translate(-50%, -50%);
-	transition: width 0.2s, height 0.2s, opacity 0.2s;
+	transition:
+		width 0.2s,
+		height 0.2s,
+		opacity 0.2s;
 	mix-blend-mode: difference;
 }
 .cursor-ring {
@@ -74,7 +77,9 @@ img {
 	pointer-events: none;
 	z-index: 99998;
 	transform: translate(-50%, -50%);
-	transition: width 0.4s ease, height 0.4s ease;
+	transition:
+		width 0.4s ease,
+		height 0.4s ease;
 }
 body:hover .cursor {
 	opacity: 1;
@@ -219,7 +224,8 @@ section {
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: linear-gradient(
+	background:
+		linear-gradient(
 			to bottom,
 			rgba(11, 11, 14, 0.3) 0%,
 			rgba(11, 11, 14, 0.85) 100%
@@ -297,7 +303,9 @@ section {
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
 	cursor: pointer;
-	transition: transform 0.3s, box-shadow 0.3s;
+	transition:
+		transform 0.3s,
+		box-shadow 0.3s;
 	border: none;
 }
 .btn-primary {
@@ -331,7 +339,9 @@ section {
 .hero-social a {
 	font-size: 1.6rem;
 	color: rgba(255, 255, 255, 0.4);
-	transition: color 0.3s, transform 0.3s;
+	transition:
+		color 0.3s,
+		transform 0.3s;
 }
 .hero-social a:hover {
 	color: var(--gold);
@@ -464,7 +474,9 @@ section {
 	background: rgba(255, 255, 255, 0.04);
 	border: 1px solid rgba(255, 255, 255, 0.07);
 	border-radius: 4px;
-	transition: border-color 0.3s, background 0.3s;
+	transition:
+		border-color 0.3s,
+		background 0.3s;
 }
 .skill-pill:hover {
 	border-color: rgba(201, 168, 76, 0.4);
@@ -968,7 +980,9 @@ section {
 	border: 1px solid rgba(11, 11, 14, 0.1);
 	border-radius: 8px;
 	background: #fff;
-	transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s;
+	transition:
+		transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+		box-shadow 0.4s;
 	position: relative;
 	overflow: hidden;
 }
@@ -1003,7 +1017,6 @@ section {
 	color: var(--ink);
 	margin-bottom: 1.5rem;
 	font-weight: 700;
-	
 }
 .service-card p {
 	color: rgba(11, 11, 14, 0.55);
@@ -1039,7 +1052,9 @@ footer {
 .footer-links a {
 	font-size: 2rem;
 	color: rgba(255, 255, 255, 0.3);
-	transition: color 0.3s, transform 0.3s;
+	transition:
+		color 0.3s,
+		transform 0.3s;
 }
 .footer-links a:hover {
 	color: var(--gold);
@@ -1129,18 +1144,40 @@ footer p {
 	flex-direction: column;
 	position: fixed;
 	inset: 0;
-	background: rgba(11, 11, 14, 0.97);
-	backdrop-filter: blur(20px);
+
+	/* 🔥 stronger background */
+	background: linear-gradient(
+		180deg,
+		rgba(11, 11, 14, 0.98) 0%,
+		rgba(11, 11, 14, 0.95) 100%
+	);
+
+	backdrop-filter: blur(12px);
+
 	justify-content: center;
 	align-items: center;
 	gap: 3rem;
-	z-index: 999;
+	z-index: 1000;
 }
+
 .main-nav.open ul {
 	flex-direction: column;
 	text-align: center;
 	gap: 3rem;
 }
+
 .main-nav.open a {
-	font-size: 2rem;
+	font-size: 2.2rem;
+	color: #fff;
+	font-weight: 600;
+}
+
+/* FIX: hamburger always clickable */
+.mobile-toggle {
+	position: relative;
+	z-index: 2000;
+}
+
+.main-nav.open {
+	z-index: 1000;
 }
