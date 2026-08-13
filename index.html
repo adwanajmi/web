@@ -4,10 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adwa Najmi — Software Engineer</title>
+
+  <!-- Primary Meta Tags -->
+  <title>Adwa Najmi — Software Engineer & Laravel Developer</title>
+  <meta name="title" content="Adwa Najmi — Software Engineer & Laravel Developer">
   <meta name="description"
-    content="Portfolio of Adwa Najmi, a Software Engineer and Laravel Developer based in Malaysia.">
+    content="Portfolio of Adwa Najmi, a Software Engineer based in Malaysia specializing in Laravel, PHP, enterprise systems, and web architecture.">
   <link rel="icon" type="image/png" href="images/banner.png">
+
+  <!-- Open Graph / WhatsApp / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/adwanajmi/">
+  <meta property="og:title" content="Adwa Najmi — Software Engineer & Laravel Developer">
+  <meta property="og:description"
+    content="Crafting robust backends and polished interfaces with Laravel & PHP. Explore my enterprise & government systems portfolio.">
+  <meta property="og:image" content="images/Adwa.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Adwa Najmi — Software Engineer">
+  <meta property="twitter:description"
+    content="Crafting robust backends and polished interfaces with Laravel & PHP.">
+  <meta property="twitter:image" content="images/Adwa.jpg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +41,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
 
   <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -30,11 +49,10 @@
   <!-- ===== NAV ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="#top" class="nav-logo">
-        <span class="logo-bracket">
-          << /span>
-            <span class="logo-text">adwa.najmi</span>
-            <span class="logo-bracket">/></span>
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">adwa.najmi</span>
+        <span class="logo-bracket">/&gt;</span>
       </a>
       <div class="nav-links">
         <a href="#about" class="nav-link" data-index="0">// about</a>
@@ -141,16 +159,16 @@
           </div>
           <div class="about-stats">
             <div class="about-stat">
-              <span class="stat-val" id="expYears">0</span>
+              <span class="stat-val" id="expYears">4</span>
               <span class="stat-lbl">Years<br>Building</span>
             </div>
             <div class="about-stat">
-              <span class="stat-val" id="projectCount">0</span>
+              <span class="stat-val" id="projectCount">11</span>
               <span class="stat-lbl">Projects<br>Shipped</span>
             </div>
             <div class="about-stat">
-              <span class="stat-val">3</span>
-              <span class="stat-lbl">Happy<br>Clients</span>
+              <span class="stat-val">6+</span>
+              <span class="stat-lbl">Enterprise<br>Systems</span>
             </div>
           </div>
         </div>
@@ -163,13 +181,11 @@
           </h2>
           <p>
             I'm <strong>Adwa Najmi</strong>, a Software Engineer based in Kuala Lumpur, Malaysia.
-            I thrive in challenging environments that push me to learn and adapt — from
-            government portals to enterprise platforms.
+            I thrive in challenging technical environments — specializing in full-lifecycle web development from government portals to complex concession scheduling platforms and AI-assisted enterprise toolkits.
           </p>
           <p>
-            My craft is delivering high-quality web systems using <strong>Laravel</strong>,
-            <strong>PHP</strong>, and modern web standards. I believe in clean code,
-            thoughtful architecture, and experiences that just <em>feel right</em>.
+            My core expertise centers around building scalable web systems using <strong>Laravel</strong>,
+            <strong>PHP</strong>, <strong>MySQL</strong>, and modern JavaScript standards. I focus on clean backend architecture, secure role-based permissions, automated reporting engines, RAG AI integrations, and user interfaces that deliver exceptional performance.
           </p>
 
           <div class="tech-stack">
@@ -219,39 +235,125 @@
           Selected<br>
           <span class="gradient-text">Projects</span>
         </h2>
-        <p class="work-subtitle">Click any card to explore the full story.</p>
+        <p class="work-subtitle">Click any card to explore key details and tech architecture.</p>
+      </div>
+
+      <!-- WORK CATEGORY FILTERS -->
+      <div class="work-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="enterprise">Enterprise & Govt</button>
+        <button class="filter-btn" data-filter="corporate">Corporate Systems</button>
+        <button class="filter-btn" data-filter="mobile">Mobile & Apps</button>
       </div>
 
       <div class="work-grid">
-        <div class="work-card" onclick="openModal('modal-SWM')">
+        <!-- Bably — Smart Baby Care & Family Tracking -->
+        <div class="work-card" data-category="mobile" onclick="openModal('modal-bably')">
+          <div class="work-card-bg" style="background-image:url('images/projects/Bably/hero.png')"></div>
+          <div class="work-card-overlay"></div>
+          <div class="work-card-content">
+            <span class="work-tag">Smart Web & Mobile App</span>
+            <h3>Bably — Smart Baby Care</h3>
+            <p>Floating dock UI, sleep tracking analytics, QR family access & daily insight engine</p>
+            <div class="work-card-footer">
+              <span class="work-tech">Vite · React 19 · Firebase</span>
+              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kira+ — Tax Relief & Receipt Intelligence -->
+        <div class="work-card" data-category="enterprise" onclick="openModal('modal-kira')">
+          <div class="work-card-bg" style="background-image:url('images/projects/LHDN/logo.png')"></div>
+          <div class="work-card-overlay"></div>
+          <div class="work-card-content">
+            <span class="work-tag">Finance & AI System</span>
+            <h3>Kira+ Tax Relief & Receipt Intelligence</h3>
+            <p>Automated LHDN tax relief calculator, Vision OCR geometry parser & merchant intelligence</p>
+            <div class="work-card-footer">
+              <span class="work-tech">Next.js 16 · Supabase · Vision OCR</span>
+              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMS v2 HR Training & Assessment -->
+        <div class="work-card" data-category="enterprise" onclick="openModal('modal-ems-hrtraining')">
           <div class="work-card-bg" style="background-image:url('images/projects/SWM/image.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
-            <span class="work-tag">Web App</span>
-            <h3>SWM Environment</h3>
-            <p>Internal system & contractor portal</p>
+            <span class="work-tag">Enterprise System</span>
+            <h3>EMS v2 — HR Training & Assessment</h3>
+            <p>Video checkpoints, staff/contractor tracking, interactive assessments & reporting analytics</p>
             <div class="work-card-footer">
-              <span class="work-tech">Laravel</span>
+              <span class="work-tech">Laravel · Multi-DB · MySQL</span>
               <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
             </div>
           </div>
         </div>
 
-        <div class="work-card" onclick="openModal('modal-iJadual')">
+        <!-- EMS v2 Driver Assessment -->
+        <div class="work-card" data-category="enterprise" onclick="openModal('modal-ems-driver')">
+          <div class="work-card-bg" style="background-image:url('images/projects/SWM/image.png')"></div>
+          <div class="work-card-overlay"></div>
+          <div class="work-card-content">
+            <span class="work-tag">Enterprise System</span>
+            <h3>EMS v2 — Driver Assessment & Evaluation</h3>
+            <p>Concession driver evaluation checklists, 2-stage superior reviews & score analytics</p>
+            <div class="work-card-footer">
+              <span class="work-tech">Laravel · MySQL · Blade</span>
+              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMS v2 Employee Toolkit -->
+        <div class="work-card" data-category="enterprise" onclick="openModal('modal-ems-toolkit')">
+          <div class="work-card-bg" style="background-image:url('images/projects/SWM/image.png')"></div>
+          <div class="work-card-overlay"></div>
+          <div class="work-card-content">
+            <span class="work-tag">Enterprise System</span>
+            <h3>EMS v2 — Employee Toolkit</h3>
+            <p>SOP document repository, folder tagging, auto-assign rules & staff feedback management</p>
+            <div class="work-card-footer">
+              <span class="work-tech">Laravel · MySQL · Blade</span>
+              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SWM Environment -->
+        <div class="work-card" data-category="enterprise" onclick="openModal('modal-SWM')">
+          <div class="work-card-bg" style="background-image:url('images/projects/SWM/image.png')"></div>
+          <div class="work-card-overlay"></div>
+          <div class="work-card-content">
+            <span class="work-tag">Enterprise System</span>
+            <h3>EMS v1 - Schedule Management</h3>
+            <p>Internal system & contractor portal</p>
+            <div class="work-card-footer">
+              <span class="work-tech">Laravel · MySQL</span>
+              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- iJadual SwCorp -->
+        <div class="work-card" data-category="enterprise" onclick="openModal('modal-iJadual')">
           <div class="work-card-bg" style="background-image:url('images/projects/SWM/iJadual/swcorp.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
-            <span class="work-tag">Web App</span>
+            <span class="work-tag">Govt Concession</span>
             <h3>iJadual SwCorp</h3>
             <p>Scheduling system for SWCorp Malaysia</p>
             <div class="work-card-footer">
-              <span class="work-tech">Laravel</span>
+              <span class="work-tech">Laravel · PHP</span>
               <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
             </div>
           </div>
         </div>
 
-        <div class="work-card" onclick="openModal('modal-gogolf')">
+        <!-- Gogolf -->
+        <div class="work-card" data-category="mobile" onclick="openModal('modal-gogolf')">
           <div class="work-card-bg" style="background-image:url('images/projects/Degree/Gogolf/gogolf.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
@@ -265,7 +367,8 @@
           </div>
         </div>
 
-        <div class="work-card" onclick="openModal('modal-tnb')">
+        <!-- TNB Genco Academy -->
+        <div class="work-card" data-category="corporate" onclick="openModal('modal-tnb')">
           <div class="work-card-bg" style="background-image:url('images/projects/Degree/tnb.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
@@ -273,19 +376,20 @@
             <h3>TNB Genco Academy</h3>
             <p>Corporate LMS platform</p>
             <div class="work-card-footer">
-              <span class="work-tech">Laravel</span>
+              <span class="work-tech">Laravel · PHP</span>
               <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
             </div>
           </div>
         </div>
 
-        <div class="work-card" onclick="openModal('modal-mbpj')">
+        <!-- MBPJ E-Sistem -->
+        <div class="work-card" data-category="enterprise" onclick="openModal('modal-mbpj')">
           <div class="work-card-bg" style="background-image:url('images/projects/MBPJ/mbpj.jpeg')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
-            <span class="work-tag">Prototype</span>
+            <span class="work-tag">Municipal Portal</span>
             <h3>MBPJ E-Sistem</h3>
-            <p>Municipal management prototype</p>
+            <p>Municipal collection prototype system</p>
             <div class="work-card-footer">
               <span class="work-tech">Laravel</span>
               <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
@@ -293,11 +397,12 @@
           </div>
         </div>
 
-        <div class="work-card" onclick="openModal('modal-maiwp')">
+        <!-- MAIWP System -->
+        <div class="work-card" data-category="enterprise" onclick="openModal('modal-maiwp')">
           <div class="work-card-bg" style="background-image:url('images/projects/MAIWP/maiwp.jpeg')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
-            <span class="work-tag">Prototype</span>
+            <span class="work-tag">Enterprise Prototype</span>
             <h3>MAIWP System</h3>
             <p>Resource management system</p>
             <div class="work-card-footer">
@@ -307,7 +412,8 @@
           </div>
         </div>
 
-        <div class="work-card" onclick="openModal('modal-emas')">
+        <!-- eMAS RMK12 -->
+        <div class="work-card" data-category="enterprise" onclick="openModal('modal-emas')">
           <div class="work-card-bg" style="background-image:url('images/projects/eMAS/emas.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
@@ -315,17 +421,18 @@
             <h3>eMAS RMK12</h3>
             <p>Government reporting system</p>
             <div class="work-card-footer">
-              <span class="work-tech">Laravel</span>
+              <span class="work-tech">Laravel · MySQL</span>
               <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
             </div>
           </div>
         </div>
 
-        <div class="work-card" onclick="openModal('modal-gym')">
+        <!-- Gym Management -->
+        <div class="work-card" data-category="mobile" onclick="openModal('modal-gym')">
           <div class="work-card-bg" style="background-image:url('images/projects/Diploma/gym.webp')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
-            <span class="work-tag">Diploma Project</span>
+            <span class="work-tag">Academic Project</span>
             <h3>Gym Management</h3>
             <p>Membership & attendance system</p>
             <div class="work-card-footer">
@@ -335,11 +442,12 @@
           </div>
         </div>
 
-        <div class="work-card" onclick="openModal('modal-mm2h')">
+        <!-- MM2H -->
+        <div class="work-card" data-category="mobile" onclick="openModal('modal-mm2h')">
           <div class="work-card-bg" style="background-image:url('images/projects/Diploma/Internship/mm2h.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
-            <span class="work-tag">Diploma Internship</span>
+            <span class="work-tag">Web Portal</span>
             <h3>Malaysia My Second Home</h3>
             <p>Website maintenance</p>
             <div class="work-card-footer">
@@ -376,11 +484,11 @@
             <div class="journey-period">Mar 2023 — Present</div>
             <h3>Software Engineer</h3>
             <div class="journey-company">SWM Environment Sdn Bhd</div>
-            <p>Assisted in the development and implementation of key systems for SWCorp Malaysia.</p>
+            <p>Architecting enterprise web solutions, HR modules, and Rymnet sync pipelines for SWCorp Malaysia.</p>
             <ul>
-              <li>Developed the <strong>Mirror System</strong> and <strong>Contractor Portal</strong>.</li>
-              <li>Debugged, enhanced, and maintained the <strong>iJadual System</strong>.</li>
-              <li>Conducted comprehensive manual testing, documented defects, and verified fixes.</li>
+              <li>Engineered the <strong>EMS v2 HR Training System</strong>, <strong>Employee Toolkit Hub</strong>, and <strong>Driver Assessment & Evaluation System</strong> modules under the SWM Environment Mirror System.</li>
+              <li>Restored and maintained real-time <strong>Rymnet Master Data & Webhook Sync Pipelines</strong> (SSO authentication, auto-rehire status handlers, Artisan repair commands).</li>
+              <li>Developed the <strong>Mirror System</strong>, <strong>Contractor Portal</strong>, and enhanced the <strong>iJadual System</strong>.</li>
             </ul>
           </div>
         </div>
@@ -465,10 +573,10 @@
             <span class="gradient-text">something</span><br>
             together.
           </h2>
-          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-          <a href="mailto:adwa.najmi@example.com" class="contact-email">
+          <p>I'm always open to discussing new projects, backend solutions, or full-time opportunities.</p>
+          <a href="mailto:adwaaa@live.com" class="contact-email">
             <span class="email-prefix">say hello at</span>
-            <span class="email-addr">adwa.najmi@example.com</span>
+            <span class="email-addr">adwaaa@live.com</span>
           </a>
         </div>
 
@@ -496,29 +604,278 @@
       <div class="container">
         <div class="footer-inner">
           <span class="footer-copy">&copy; 2026 Adwa Najmi</span>
-          <span class="footer-tag">Built with Laravel spirit </></span>
+          <span class="footer-tag">Built with Laravel spirit &lt;/&gt;</span>
         </div>
       </div>
     </footer>
   </section>
 
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <!-- ===== MODALS ===== -->
+
+  <!-- Bably Modal -->
+  <div id="modal-bably" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal-bably')">&times;</button>
+      <div class="modal-gallery">
+        <img src="images/projects/Bably/hero.png" class="modal-media" alt="Bably Smart Baby Care Overview">
+        <img src="images/projects/Bably/dashboard.png" class="modal-media" alt="Bably Mobile App Interface">
+      </div>
+      <div class="modal-info">
+        <h2>Bably — Smart Baby Care & Family Tracking Platform</h2>
+        <p>A modern, responsive baby activity logger, sleep metrics visualizer, and multi-user family tracking system built with Vite, React 19, and Firebase.</p>
+
+        <div class="modal-details-grid">
+          <div>
+            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
+              <li>Designed a floating dock bottom navigation and sleek glassmorphic responsive UI using Framer Motion.</li>
+              <li>Integrated Firebase Authentication, Firestore real-time DB, and Firebase Storage rules for multi-device sync.</li>
+              <li>Engineered a QR Scanner & Generator module for instant child profile onboarding and role-based access.</li>
+              <li>Built an AI-assisted daily insight engine with cherry blossom themes and personalized report summaries.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-tech-badges">
+          <span class="modal-tech-badge">Vite</span>
+          <span class="modal-tech-badge">React 19</span>
+          <span class="modal-tech-badge">Firebase</span>
+          <span class="modal-tech-badge">Framer Motion</span>
+          <span class="modal-tech-badge">QR Scanner</span>
+          <span class="modal-tech-badge">Tailwind CSS</span>
+        </div>
+
+        <div class="modal-meta" style="margin-top:1.5rem;">
+          <span><strong>Category:</strong> Smart Web & Mobile App</span>
+          <span><strong>Year:</strong> 2026</span>
+          <span><strong>GitHub:</strong> <a href="https://github.com/adwanajmi/alaiya" target="_blank" style="color:var(--cyan); text-decoration:underline;">adwanajmi/alaiya</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kira+ Modal -->
+  <div id="modal-kira" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal-kira')">&times;</button>
+      <div class="modal-gallery">
+        <img src="images/projects/KiraPlus/welcome.png" class="modal-media" alt="Kira+ Personal Finance Vault - Welcome & Authentication Screen">
+        <img src="images/projects/KiraPlus/dashboard.png" class="modal-media" alt="Kira+ Financial Operating System - Dashboard & Spending Insights">
+        <img src="images/projects/KiraPlus/analytics.png" class="modal-media" alt="Kira+ Cash Flow & Expense Category Breakdown Analytics">
+        <img src="images/projects/KiraPlus/expenses_vault.png" class="modal-media" alt="Kira+ Expenses & Vault Receipt History">
+        <img src="images/projects/KiraPlus/wallets.png" class="modal-media" alt="Kira+ Multi-Wallet Balance & Asset Allocation">
+      </div>
+      <div class="modal-info">
+        <h2>Kira+ — Tax Relief & Receipt Intelligence System</h2>
+        <p>Personal finance tracking platform and automated tax relief engine compliant with LHDN Malaysia tax categories and limits.</p>
+
+        <div class="modal-details-grid">
+          <div>
+            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
+              <li>Implemented Google Vision API OCR geometry reconstruction algorithm to pair scrambled receipt text with itemized amounts.</li>
+              <li>Engineered real-time LHDN tax relief calculation engine tracking claim limits across personal, medical, and lifestyle categories.</li>
+              <li>Built multi-wallet support, salary breakdown analysis, recurring bills tracking, and Supabase RLS row-level security.</li>
+              <li>Developed an automated deduplication engine, merchant brand canonicalization, and PDF/Excel report exports.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-tech-badges">
+          <span class="modal-tech-badge">Next.js 16</span>
+          <span class="modal-tech-badge">React 19</span>
+          <span class="modal-tech-badge">Supabase</span>
+          <span class="modal-tech-badge">Google Vision OCR</span>
+          <span class="modal-tech-badge">Recharts</span>
+          <span class="modal-tech-badge">TypeScript</span>
+        </div>
+
+        <div class="modal-meta" style="margin-top:1.5rem;">
+          <span><strong>Category:</strong> Finance & AI System</span>
+          <span><strong>Year:</strong> 2025 — 2026</span>
+          <span><strong>GitHub:</strong> <a href="https://github.com/adwanajmi/lhdn-tracker" target="_blank" style="color:var(--cyan); text-decoration:underline;">adwanajmi/lhdn-tracker</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMS v2 HR Training Modal -->
+  <div id="modal-ems-hrtraining" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal-ems-hrtraining')">&times;</button>
+      <div class="modal-gallery">
+        <img src="images/projects/SWM/hr_training/dashboard.png" class="modal-media" alt="HR Training Overview Dashboard">
+        <img src="images/projects/SWM/hr_training/develop_training.png" class="modal-media" alt="Develop Training List">
+        <img src="images/projects/SWM/hr_training/view_training.png" class="modal-media" alt="View Training & Staff Assignment Records">
+        <img src="images/projects/SWM/hr_training/video_checkpoints.png" class="modal-media" alt="Interactive Video Quiz Builder & Checkpoints">
+        <img src="images/projects/SWM/hr_training/assessments.png" class="modal-media" alt="Develop Assessment Management">
+        <img src="images/projects/SWM/hr_training/preview_assessment.png" class="modal-media" alt="Interactive Assessment Quiz Mode">
+        <img src="images/projects/SWM/hr_training/assessment_report.png" class="modal-media" alt="Assessment Analytics & Attempt Reports">
+      </div>
+      <div class="modal-info">
+        <h2>EMS v2 — HR Training & Interactive Assessment System</h2>
+        <p>Comprehensive training development, interactive assessment grading, and analytics platform engineered for SWM Environment staff and concession contractors.</p>
+
+        <div class="modal-details-grid">
+          <div>
+            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
+              <li>Dedicated multi-database architecture utilizing <code>mysqlHRTraining</code> database connection.</li>
+              <li>Develop Training module supporting course video material and internal staff / contractor assignment logs.</li>
+              <li>Interactive video quiz builder pausing video playback at exact timestamp checkpoints with seek restriction.</li>
+              <li>Assessment engine supporting Objective, True/False, and Subjective essay questions with automated grading.</li>
+              <li>Interactive Assessment Quiz Preview Mode for real-time exam verification and staff test-taking workflows.</li>
+              <li>Assessment Analytics & Score Reports tracking overall attempts (765+ attempts logged), pass/fail percentages, score breakdowns, and Excel exports.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-tech-badges">
+          <span class="modal-tech-badge">Laravel 10</span>
+          <span class="modal-tech-badge">PHP</span>
+          <span class="modal-tech-badge">MySQL</span>
+          <span class="modal-tech-badge">Video Checkpoints</span>
+          <span class="modal-tech-badge">Assessment Engine</span>
+          <span class="modal-tech-badge">REST APIs</span>
+        </div>
+
+        <div class="modal-meta" style="margin-top:1.5rem;">
+          <span><strong>Category:</strong> Enterprise HR System</span>
+          <span><strong>Year:</strong> 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMS v2 Driver Assessment Modal -->
+  <div id="modal-ems-driver" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal-ems-driver')">&times;</button>
+      <div class="modal-gallery">
+        <img src="images/projects/SWM/driver_assessment/directory.png" class="modal-media" alt="Driver Assessment Directory & Templates">
+        <img src="images/projects/SWM/driver_assessment/edit_template.png" class="modal-media" alt="Driver Checklist Template Builder & Passing Mark Rules">
+        <img src="images/projects/SWM/driver_assessment/conduct.png" class="modal-media" alt="Conduct Driver Evaluation Form">
+        <img src="images/projects/SWM/driver_assessment/records.png" class="modal-media" alt="Submissions Center & Superior Approval Tracking">
+        <img src="images/projects/SWM/driver_assessment/result.png" class="modal-media" alt="Evaluation Result & Digital Signatures">
+      </div>
+      <div class="modal-info">
+        <h2>EMS v2 — Driver Assessment & Evaluation System</h2>
+        <p>Standardized driver evaluation and compliance verification platform engineered for concession operations, fleet driver safety assessments, and superior review workflows.</p>
+
+        <div class="modal-details-grid">
+          <div>
+            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
+              <li>Standardized driver checklist builder supporting custom passing scores (e.g., 70%-80%), attempt limits, and dynamic question sets.</li>
+              <li>Evaluation Submissions Center with dedicated multi-role views for assessors, superiors, and HR administrators.</li>
+              <li>2-Stage review & approval workflow connecting Driver, Assessor, and Superior sign-offs with digital acknowledgements.</li>
+              <li>Detailed score analytics breakdown mapping objective, true/false, and subjective performance per driver and vehicle plate.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-tech-badges">
+          <span class="modal-tech-badge">Laravel 10</span>
+          <span class="modal-tech-badge">PHP</span>
+          <span class="modal-tech-badge">MySQL</span>
+          <span class="modal-tech-badge">Driver Checklists</span>
+          <span class="modal-tech-badge">Superior Review Workflow</span>
+          <span class="modal-tech-badge">Digital Signatures</span>
+        </div>
+
+        <div class="modal-meta" style="margin-top:1.5rem;">
+          <span><strong>Category:</strong> Enterprise System (SWM Mirror Module)</span>
+          <span><strong>Year:</strong> 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMS v2 Employee Toolkit Modal -->
+  <div id="modal-ems-toolkit" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal-ems-toolkit')">&times;</button>
+      <div class="modal-gallery">
+        <img src="images/projects/SWM/toolkit/browse.png" class="modal-media" alt="Browse Resources & Folders">
+        <img src="images/projects/SWM/toolkit/detail.png" class="modal-media" alt="Resource Detail & PDF Viewer">
+        <img src="images/projects/SWM/toolkit/dashboard.png" class="modal-media" alt="Admin Toolkit Dashboard">
+      </div>
+      <div class="modal-info">
+        <h2>EMS v2 — Employee Toolkit & SOP Management Hub</h2>
+        <p>Enterprise document management repository and knowledge hub integrated into the SWM Environment Mirror System for SOPs, company policies, and training resources.</p>
+
+        <div class="modal-details-grid">
+          <div>
+            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
+              <li>Centralized enterprise document repository supporting PDFs, policies, SOPs, and training media.</li>
+              <li>Embedded document previewer with bookmarking, download management, and staff feedback rating handlers.</li>
+              <li>Version control engine maintaining file revision history, document updates, and auto-replacements.</li>
+              <li>Auto-assign rules engine mapping resource accessibility dynamically by department, designation, state, and district.</li>
+              <li>Administrative management dashboard monitoring file counts, folder structures, recent uploads, and staff feedback reports.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-tech-badges">
+          <span class="modal-tech-badge">Laravel 10</span>
+          <span class="modal-tech-badge">PHP</span>
+          <span class="modal-tech-badge">MySQL</span>
+          <span class="modal-tech-badge">PDF Viewer</span>
+          <span class="modal-tech-badge">Version Control</span>
+          <span class="modal-tech-badge">Auto-Assign Rules</span>
+          <span class="modal-tech-badge">Staff Feedback</span>
+        </div>
+
+        <div class="modal-meta" style="margin-top:1.5rem;">
+          <span><strong>Category:</strong> Enterprise System (SWM Mirror Module)</span>
+          <span><strong>Year:</strong> 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SWM Environment Modal -->
   <div id="modal-SWM" class="modal-overlay">
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal('modal-SWM')">&times;</button>
       <div class="modal-gallery">
-        <img src="images/projects/SWM/Schedule/dashboard.png" class="modal-media">
-        <img src="images/projects/SWM/Schedule/login.png" class="modal-media">
-        <img src="images/projects/SWM/Schedule/schedule-dashboard.png" class="modal-media">
-        <img src="images/projects/SWM/Schedule/schedule-home.png" class="modal-media">
-        <img src="images/projects/SWM/Schedule/schedule_edit.png" class="modal-media">
-        <img src="images/projects/SWM/Schedule/image.png" class="modal-media">
+        <img src="images/projects/SWM/Schedule/dashboard.png" class="modal-media" alt="Dashboard">
+        <img src="images/projects/SWM/Schedule/login.png" class="modal-media" alt="Login Page">
+        <img src="images/projects/SWM/Schedule/schedule-dashboard.png" class="modal-media" alt="Schedule Dashboard">
+        <img src="images/projects/SWM/Schedule/schedule-home.png" class="modal-media" alt="Schedule Home">
+        <img src="images/projects/SWM/Schedule/schedule_edit.png" class="modal-media" alt="Schedule Edit">
+        <img src="images/projects/SWM/Schedule/image.png" class="modal-media" alt="SWM Main Overview">
       </div>
       <div class="modal-info">
-        <h2>Mirror System</h2>
-        <p>Schedule Management System for SWM Environment.</p>
-        <div class="modal-meta">
-          <span><strong>Tech:</strong> Laravel PHP</span>
+        <h2>SWM Environment Mirror System & Contractor Portal</h2>
+        <p>Enterprise scheduling management system engineered for SWM Environment concession operations.</p>
+        
+        <div class="modal-details-grid">
+          <div>
+            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
+              <li>Engineered schedule mirroring and automated validation routines.</li>
+              <li>Built multi-role contractor workflows for task submission and approval.</li>
+              <li>Optimized MySQL query logic for real-time operational reporting.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-tech-badges">
+          <span class="modal-tech-badge">Laravel PHP</span>
+          <span class="modal-tech-badge">MySQL</span>
+          <span class="modal-tech-badge">Bootstrap</span>
+          <span class="modal-tech-badge">REST APIs</span>
+        </div>
+
+        <div class="modal-meta" style="margin-top:1.5rem;">
+          <span><strong>Category:</strong> Enterprise System</span>
           <span><strong>Year:</strong> 2023</span>
         </div>
       </div>
@@ -529,15 +886,34 @@
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal('modal-iJadual')">&times;</button>
       <div class="modal-gallery">
-        <img src="images/projects/SWM/iJadual/image.png" class="modal-media">
-        <img src="images/projects/SWM/iJadual/images.png" class="modal-media">
-        <img src="images/projects/SWM/iJadual/login.png" class="modal-media">
+        <img src="images/projects/SWM/iJadual/image.png" class="modal-media" alt="iJadual Overview">
+        <img src="images/projects/SWM/iJadual/images.png" class="modal-media" alt="iJadual Management">
+        <img src="images/projects/SWM/iJadual/login.png" class="modal-media" alt="iJadual Login">
       </div>
       <div class="modal-info">
-        <h2>Ijadual System</h2>
-        <p>Sistem Penjadualan Konsesi</p>
-        <div class="modal-meta">
-          <span><strong>Tech:</strong> Laravel PHP</span>
+        <h2>iJadual SWCorp Malaysia</h2>
+        <p>National solid waste collection schedule tracking platform for SWCorp Malaysia.</p>
+
+        <div class="modal-details-grid">
+          <div>
+            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
+              <li>Maintained core scheduling module handling statewide concession data.</li>
+              <li>Conducted systematic QA manual testing, defect reporting, and fix validations.</li>
+              <li>Improved UI response times and legacy PHP controllers.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-tech-badges">
+          <span class="modal-tech-badge">Laravel</span>
+          <span class="modal-tech-badge">PHP</span>
+          <span class="modal-tech-badge">MySQL</span>
+          <span class="modal-tech-badge">JavaScript</span>
+        </div>
+
+        <div class="modal-meta" style="margin-top:1.5rem;">
+          <span><strong>Category:</strong> Govt Concession</span>
           <span><strong>Year:</strong> 2023</span>
         </div>
       </div>
@@ -548,18 +924,37 @@
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal('modal-gogolf')">&times;</button>
       <div class="modal-gallery">
-        <img src="images/projects/Degree/Gogolf/gogolf.png" class="modal-media">
-        <img src="images/projects/Degree/Gogolf/gogolf_home.png" class="modal-media">
-        <img src="images/projects/Degree/Gogolf/gogolf_main.png" class="modal-media">
+        <img src="images/projects/Degree/Gogolf/gogolf.png" class="modal-media" alt="Gogolf App">
+        <img src="images/projects/Degree/Gogolf/gogolf_home.png" class="modal-media" alt="Gogolf Home">
+        <img src="images/projects/Degree/Gogolf/gogolf_main.png" class="modal-media" alt="Gogolf Main Screen">
         <video class="modal-media" autoplay muted loop playsinline>
           <source src="images/projects/Degree/Gogolf/gogolf.mp4" type="video/mp4">
         </video>
       </div>
       <div class="modal-info">
-        <h2>Gogolf</h2>
-        <p>Golf booking mobile application system.</p>
-        <div class="modal-meta">
-          <span><strong>Tech:</strong> Ionic, Angular</span>
+        <h2>Gogolf Booking System</h2>
+        <p>Cross-platform mobile application for Kelab Darul Ehsan tee-time reservations.</p>
+
+        <div class="modal-details-grid">
+          <div>
+            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
+              <li>Developed mobile booking UI using Ionic framework & Angular.</li>
+              <li>Integrated slot availability calendar and booking confirmation flows.</li>
+              <li>Designed responsive mobile layouts for iOS & Android devices.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-tech-badges">
+          <span class="modal-tech-badge">Ionic</span>
+          <span class="modal-tech-badge">Angular</span>
+          <span class="modal-tech-badge">TypeScript</span>
+          <span class="modal-tech-badge">Mobile UI</span>
+        </div>
+
+        <div class="modal-meta" style="margin-top:1.5rem;">
+          <span><strong>Category:</strong> Mobile App</span>
           <span><strong>Year:</strong> 2020</span>
         </div>
       </div>
@@ -570,17 +965,36 @@
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal('modal-tnb')">&times;</button>
       <div class="modal-gallery">
-        <img src="images/projects/Degree/tnb.jpeg" class="modal-media">
-        <img src="images/projects/Degree/tnb.png" class="modal-media">
+        <img src="images/projects/Degree/tnb.jpeg" class="modal-media" alt="TNB Portal">
+        <img src="images/projects/Degree/tnb.png" class="modal-media" alt="TNB Overview">
         <video class="modal-media" autoplay muted loop playsinline>
           <source src="images/projects/Degree/tnb.mp4" type="video/mp4">
         </video>
       </div>
       <div class="modal-info">
-        <h2>TNB Genco Academy</h2>
-        <p>Internal LMS for TNB Headquarters.</p>
-        <div class="modal-meta">
-          <span><strong>Tech:</strong> Laravel, PHP</span>
+        <h2>TNB Genco Academy LMS</h2>
+        <p>Internal Learning Management System developed for Tenaga Nasional Berhad Headquarters.</p>
+
+        <div class="modal-details-grid">
+          <div>
+            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
+              <li>Built course catalog, staff training registration, and department tracking modules.</li>
+              <li>Implemented admin dashboards for managing learning materials and users.</li>
+              <li>Designed custom authentication and permission layers.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-tech-badges">
+          <span class="modal-tech-badge">Laravel</span>
+          <span class="modal-tech-badge">PHP</span>
+          <span class="modal-tech-badge">MySQL</span>
+          <span class="modal-tech-badge">Blade</span>
+        </div>
+
+        <div class="modal-meta" style="margin-top:1.5rem;">
+          <span><strong>Category:</strong> Corporate LMS</span>
           <span><strong>Year:</strong> 2020</span>
         </div>
       </div>
@@ -591,15 +1005,32 @@
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal('modal-mbpj')">&times;</button>
       <div class="modal-gallery">
-        <img src="images/projects/MBPJ/mbpj_home.png" class="modal-media">
-        <img src="images/projects/MBPJ/mbpj_login.png" class="modal-media">
-        <img src="images/projects/MBPJ/mbpj.jpeg" class="modal-media">
+        <img src="images/projects/MBPJ/mbpj_home.png" class="modal-media" alt="MBPJ Home">
+        <img src="images/projects/MBPJ/mbpj_login.png" class="modal-media" alt="MBPJ Login">
+        <img src="images/projects/MBPJ/mbpj.jpeg" class="modal-media" alt="MBPJ Overview">
       </div>
       <div class="modal-info">
-        <h2>MBPJ E-Sistem</h2>
-        <p>Prototype municipal management system.</p>
-        <div class="modal-meta">
-          <span><strong>Tech:</strong> Laravel, PHP</span>
+        <h2>MBPJ E-Sistem Kutipan</h2>
+        <p>Municipal waste collection and management prototype system for Majlis Bandaraya Petaling Jaya.</p>
+
+        <div class="modal-details-grid">
+          <div>
+            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
+              <li>Rapidly prototyped municipal collection modules and interactive dashboards.</li>
+              <li>Demonstrated interactive user flows to municipal council stakeholders.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-tech-badges">
+          <span class="modal-tech-badge">Laravel</span>
+          <span class="modal-tech-badge">PHP</span>
+          <span class="modal-tech-badge">JavaScript</span>
+        </div>
+
+        <div class="modal-meta" style="margin-top:1.5rem;">
+          <span><strong>Category:</strong> Municipal Prototype</span>
           <span><strong>Year:</strong> 2022</span>
         </div>
       </div>
@@ -610,16 +1041,33 @@
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal('modal-maiwp')">&times;</button>
       <div class="modal-gallery">
-        <img src="images/projects/MAIWP/maiwp_home.png" class="modal-media">
-        <img src="images/projects/MAIWP/maiwp_login.png" class="modal-media">
-        <img src="images/projects/MAIWP/maiwp_main.png" class="modal-media">
-        <img src="images/projects/MAIWP/maiwp.webp" class="modal-media">
+        <img src="images/projects/MAIWP/maiwp_home.png" class="modal-media" alt="MAIWP Home">
+        <img src="images/projects/MAIWP/maiwp_login.png" class="modal-media" alt="MAIWP Login">
+        <img src="images/projects/MAIWP/maiwp_main.png" class="modal-media" alt="MAIWP Main Portal">
+        <img src="images/projects/MAIWP/maiwp.webp" class="modal-media" alt="MAIWP Dashboard">
       </div>
       <div class="modal-info">
-        <h2>MAIWP System</h2>
-        <p>Resource management prototype system.</p>
-        <div class="modal-meta">
-          <span><strong>Tech:</strong> Laravel, PHP</span>
+        <h2>MAIWP Resource Management System</h2>
+        <p>Resource tracking and distribution prototype system for Majlis Agama Islam Wilayah Persekutuan.</p>
+
+        <div class="modal-details-grid">
+          <div>
+            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
+              <li>Prototyped resource request and inventory management workflows.</li>
+              <li>Engineered clean Blade view components and database relations.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-tech-badges">
+          <span class="modal-tech-badge">Laravel</span>
+          <span class="modal-tech-badge">PHP</span>
+          <span class="modal-tech-badge">MySQL</span>
+        </div>
+
+        <div class="modal-meta" style="margin-top:1.5rem;">
+          <span><strong>Category:</strong> Enterprise Prototype</span>
           <span><strong>Year:</strong> 2022</span>
         </div>
       </div>
@@ -630,16 +1078,34 @@
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal('modal-emas')">&times;</button>
       <div class="modal-gallery">
-        <img src="images/projects/eMAS/emas.png" class="modal-media">
-        <img src="images/projects/eMAS/ppd.png" class="modal-media">
-        <img src="images/projects/eMAS/ppdd.png" class="modal-media">
-        <img src="images/projects/eMAS/rmk12.png" class="modal-media">
+        <img src="images/projects/eMAS/emas.png" class="modal-media" alt="eMAS Overview">
+        <img src="images/projects/eMAS/ppd.png" class="modal-media" alt="eMAS Portal">
+        <img src="images/projects/eMAS/ppdd.png" class="modal-media" alt="eMAS System">
+        <img src="images/projects/eMAS/rmk12.png" class="modal-media" alt="eMAS RMK12">
       </div>
       <div class="modal-info">
-        <h2>eMAS RMK12</h2>
-        <p>Government reporting & management system.</p>
-        <div class="modal-meta">
-          <span><strong>Tech:</strong> Laravel, PHP</span>
+        <h2>eMAS RMK12 Government Portal</h2>
+        <p>Federal project monitoring & reporting system for 12th Malaysia Plan (RMK12) initiatives.</p>
+
+        <div class="modal-details-grid">
+          <div>
+            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
+              <li>Designed and executed full Laravel backend structure and reporting database.</li>
+              <li>Implemented data entry forms, progress indicators, and dynamic summaries.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-tech-badges">
+          <span class="modal-tech-badge">Laravel</span>
+          <span class="modal-tech-badge">PHP</span>
+          <span class="modal-tech-badge">MySQL</span>
+          <span class="modal-tech-badge">Govt Standards</span>
+        </div>
+
+        <div class="modal-meta" style="margin-top:1.5rem;">
+          <span><strong>Category:</strong> Government System</span>
           <span><strong>Year:</strong> 2022</span>
         </div>
       </div>
@@ -650,13 +1116,20 @@
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal('modal-gym')">&times;</button>
       <div class="modal-gallery">
-        <img src="images/projects/Diploma/gym.webp" class="modal-media">
+        <img src="images/projects/Diploma/gym.webp" class="modal-media" alt="Gym Management">
       </div>
       <div class="modal-info">
         <h2>Gym Management System</h2>
-        <p>Diploma project web system.</p>
-        <div class="modal-meta">
-          <span><strong>Tech:</strong> HTML, CSS</span>
+        <p>Membership management and attendance tracking web system.</p>
+
+        <div class="modal-tech-badges">
+          <span class="modal-tech-badge">HTML5</span>
+          <span class="modal-tech-badge">CSS3</span>
+          <span class="modal-tech-badge">JavaScript</span>
+        </div>
+
+        <div class="modal-meta" style="margin-top:1.5rem;">
+          <span><strong>Category:</strong> Academic Project</span>
           <span><strong>Year:</strong> 2016</span>
         </div>
       </div>
@@ -667,260 +1140,35 @@
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal('modal-mm2h')">&times;</button>
       <div class="modal-gallery">
-        <img src="images/projects/Diploma/Internship/mm2h.png" class="modal-media">
+        <img src="images/projects/Diploma/Internship/mm2h.png" class="modal-media" alt="MM2H Website">
       </div>
       <div class="modal-info">
-        <h2>Malaysian Migrate 2 Home</h2>
-        <p>Diploma internship web maintenance system.</p>
-        <div class="modal-meta">
-          <span><strong>Tech:</strong> WordPress</span>
+        <h2>Malaysia My Second Home Portal</h2>
+        <p>Official website maintenance and content management during diploma internship.</p>
+
+        <div class="modal-tech-badges">
+          <span class="modal-tech-badge">WordPress</span>
+          <span class="modal-tech-badge">Web Maintenance</span>
+        </div>
+
+        <div class="modal-meta" style="margin-top:1.5rem;">
+          <span><strong>Category:</strong> Web Portal</span>
           <span><strong>Year:</strong> 2016</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- =========================================================
-       SCRIPTS
-  ========================================================= -->
-  <script>
-    // ---- NAVBAR SCROLL EFFECT ----
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      const curr = window.scrollY;
-      if (curr > 80) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-
-    // ---- MOBILE NAV ----
-    const hamburger = document.getElementById('navHamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('open');
-    });
-
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
-      });
-    });
-
-    // ---- GSAP INIT ----
-    gsap.registerPlugin(ScrollTrigger, TextPlugin);
-
-    // ---- HERO GRID BG ANIMATION ----
-    const gridCanvas = document.createElement('canvas');
-    const heroGrid = document.getElementById('heroGrid');
-    heroGrid.appendChild(gridCanvas);
-    const ctx = gridCanvas.getContext('2d');
-    let gridW, gridH;
-
-    function resizeGrid() {
-      gridW = heroGrid.offsetWidth;
-      gridH = heroGrid.offsetHeight;
-      gridCanvas.width = gridW;
-      gridCanvas.height = gridH;
-    }
-    resizeGrid();
-    window.addEventListener('resize', resizeGrid);
-
-    const gridSize = 60;
-    let gridTime = 0;
-
-    function drawGrid() {
-      ctx.clearRect(0, 0, gridW, gridH);
-      ctx.strokeStyle = 'rgba(0, 240, 255, 0.06)';
-      ctx.lineWidth = 1;
-
-      for (let x = 0; x < gridW; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, gridH);
-        ctx.stroke();
-      }
-      for (let y = 0; y < gridH; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(gridW, y);
-        ctx.stroke();
-      }
-
-      gridTime += 0.005;
-      for (let x = 0; x < gridW; x += gridSize) {
-        for (let y = 0; y < gridH; y += gridSize) {
-          const pulse = Math.sin(x * 0.02 + y * 0.03 + gridTime * 2) * 0.5 + 0.5;
-          const alpha = pulse * 0.3;
-          ctx.fillStyle = `rgba(0, 240, 255, ${alpha})`;
-          ctx.beginPath();
-          ctx.arc(x, y, 1.5, 0, Math.PI * 2);
-          ctx.fill();
-        }
-      }
-      requestAnimationFrame(drawGrid);
-    }
-    drawGrid();
-
-    // ---- HERO ENTRANCE ----
-    gsap.set('.hero-badge', { opacity: 0, y: 20 });
-    gsap.set('.hero-terminal', { opacity: 0, y: 20 });
-    gsap.set('.hero-title', { opacity: 0, y: 40 });
-    gsap.set('.hero-desc', { opacity: 0, y: 20 });
-    gsap.set('.hero-actions', { opacity: 0, y: 20 });
-    gsap.set('.hero-social', { opacity: 0 });
-    gsap.set('.hero-scroll', { opacity: 0 });
-
-    const heroTl = gsap.timeline({ delay: 0.3 });
-    heroTl
-      .to('.hero-badge', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' })
-      .to('.hero-terminal', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
-      .to('.hero-title', { opacity: 1, y: 0, duration: 1, ease: 'power4.out' }, '-=0.3')
-      .to('.hero-desc', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.5')
-      .to('.hero-actions', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.3')
-      .to('.hero-social', { opacity: 1, duration: 0.6 }, '-=0.3')
-      .to('.hero-scroll', { opacity: 1, duration: 0.6 }, '-=0.3');
-
-    // ---- GLITCH TEXT EFFECT ----
-    const glitchEl = document.querySelector('[data-glitch]');
-    if (glitchEl) {
-      const original = glitchEl.textContent;
-      const chars = '!<>-_\\/[]{}—=+*^?#________';
-      let interval;
-
-      glitchEl.addEventListener('mouseenter', () => {
-        let iterations = 0;
-        clearInterval(interval);
-        interval = setInterval(() => {
-          glitchEl.textContent = original
-            .split('')
-            .map((char, i) => {
-              if (i < iterations) return original[i];
-              return chars[Math.floor(Math.random() * chars.length)];
-            })
-            .join('');
-          if (iterations >= original.length) clearInterval(interval);
-          iterations += 1 / 3;
-        }, 30);
-      });
-    }
-
-    // ---- HERO SLIDESHOW ----
-    const slides = document.querySelectorAll('.hero-slide');
-    if (slides.length > 1) {
-      let current = 0;
-      setInterval(() => {
-        slides[current].classList.remove('active');
-        current = (current + 1) % slides.length;
-        slides[current].classList.add('active');
-      }, 3000);
-    }
-
-    // ---- ABOUT SECTION ----
-    gsap.from('.about-frame', {
-      opacity: 0, x: -60, duration: 1, ease: 'power3.out',
-      scrollTrigger: { trigger: '#about', start: 'top 75%', toggleActions: 'play none none none' }
-    });
-    gsap.from('.about-text > *', {
-      opacity: 0, y: 40, stagger: 0.12, duration: 0.8, ease: 'power3.out',
-      scrollTrigger: { trigger: '#about', start: 'top 70%', toggleActions: 'play none none none' }
-    });
-    gsap.from('.about-stat', {
-      opacity: 0, y: 30, stagger: 0.1, duration: 0.6, ease: 'power3.out',
-      scrollTrigger: { trigger: '.about-stats', start: 'top 85%', toggleActions: 'play none none none' }
-    });
-    gsap.from('.tech-item', {
-      opacity: 0, scale: 0.8, stagger: 0.06, duration: 0.5, ease: 'back.out(1.7)',
-      scrollTrigger: { trigger: '.tech-stack', start: 'top 85%', toggleActions: 'play none none none' }
-    });
-
-    // ---- STATS COUNT-UP ----
-    ScrollTrigger.create({
-      trigger: '#about',
-      start: 'top 70%',
-      once: true,
-      onEnter: () => {
-        const startDate = new Date(2020, 0, 1);
-        const now = new Date();
-        const years = Math.floor((now - startDate) / (365.25 * 24 * 60 * 60 * 1000));
-        const projectCount = document.querySelectorAll('.work-card').length;
-
-        function countUp(elId, target, duration) {
-          const el = document.getElementById(elId);
-          if (!el) return;
-          const start = Date.now();
-          const tick = () => {
-            const elapsed = Date.now() - start;
-            const progress = Math.min(elapsed / duration, 1);
-            el.textContent = Math.round(progress * target);
-            if (progress < 1) requestAnimationFrame(tick);
-          };
-          requestAnimationFrame(tick);
-        }
-
-        countUp('expYears', years, 1200);
-        countUp('projectCount', projectCount, 1200);
-      }
-    });
-
-    // ---- WORK CARDS ----
-    gsap.from('.work-card', {
-      opacity: 0, y: 60, stagger: 0.08, duration: 0.7, ease: 'power3.out',
-      scrollTrigger: { trigger: '.work-grid', start: 'top 80%', toggleActions: 'play none none none' }
-    });
-
-    // ---- JOURNEY ITEMS ----
-    gsap.from('.journey-item', {
-      opacity: 0, x: -40, stagger: 0.12, duration: 0.8, ease: 'power3.out',
-      scrollTrigger: { trigger: '.journey-timeline', start: 'top 80%', toggleActions: 'play none none none' }
-    });
-
-    // ---- CONTACT ----
-    gsap.from('.contact-text > *', {
-      opacity: 0, y: 40, stagger: 0.12, duration: 0.8, ease: 'power3.out',
-      scrollTrigger: { trigger: '#contact', start: 'top 75%', toggleActions: 'play none none none' }
-    });
-    gsap.from('.contact-link', {
-      opacity: 0, x: 40, stagger: 0.1, duration: 0.6, ease: 'power3.out',
-      scrollTrigger: { trigger: '.contact-links', start: 'top 80%', toggleActions: 'play none none none' }
-    });
-
-    // ---- MODAL ----
-    function openModal(id) {
-      const m = document.getElementById(id);
-      if (!m) return;
-      m.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-      gsap.from(m.querySelector('.modal-content'), { opacity: 0, y: 40, scale: 0.95, duration: 0.4, ease: 'power3.out' });
-    }
-    function closeModal(id) {
-      const m = document.getElementById(id);
-      if (!m) return;
-      gsap.to(m.querySelector('.modal-content'), {
-        opacity: 0, y: 20, scale: 0.95, duration: 0.25, ease: 'power2.in',
-        onComplete: () => { m.style.display = 'none'; document.body.style.overflow = 'auto'; }
-      });
-    }
-    window.addEventListener('click', e => {
-      if (e.target.classList.contains('modal-overlay')) {
-        closeModal(e.target.id);
-      }
-    });
-
-    // ---- STATS FALLBACK ----
-    document.addEventListener('DOMContentLoaded', () => {
-      const projectCount = document.querySelectorAll('.work-card').length;
-      document.getElementById('projectCount').textContent = projectCount;
-      const startDate = new Date(2020, 0, 1);
-      const now = new Date();
-      const years = Math.floor((now - startDate) / (365.25 * 24 * 60 * 60 * 1000));
-      document.getElementById('expYears').textContent = years;
-    });
-  </script>
+  <!-- Fullscreen Image Viewer Lightbox Modal -->
+  <div id="imageViewerModal" class="image-viewer-overlay">
+    <button class="image-viewer-close" id="imageViewerClose" aria-label="Close Lightbox">&times;</button>
+    <button class="image-viewer-nav prev" id="imageViewerPrev" aria-label="Previous Image"><i class="fas fa-chevron-left"></i></button>
+    <button class="image-viewer-nav next" id="imageViewerNext" aria-label="Next Image"><i class="fas fa-chevron-right"></i></button>
+    <div class="image-viewer-container">
+      <img id="imageViewerImg" src="" alt="Full View">
+      <div id="imageViewerCaption" class="image-viewer-caption"></div>
+    </div>
+  </div>
 
 </body>
 
