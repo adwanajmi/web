@@ -6,25 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary Meta Tags -->
-  <title>Adwa Najmi — Software Engineer & Laravel Developer</title>
-  <meta name="title" content="Adwa Najmi — Software Engineer & Laravel Developer">
+  <title>Adwa Najmi · Software Engineer & Laravel Developer</title>
+  <meta name="title" content="Adwa Najmi · Software Engineer & Laravel Developer">
   <meta name="description"
-    content="Portfolio of Adwa Najmi, a Software Engineer based in Malaysia specializing in Laravel, PHP, enterprise systems, and web architecture.">
+    content="Portfolio of Adwa Najmi, Software Engineer based in Malaysia specializing in Laravel, PHP, enterprise systems, and high-volume database architecture.">
   <link rel="icon" type="image/png" href="images/banner.png">
 
   <!-- Open Graph / WhatsApp / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://github.com/adwanajmi/">
-  <meta property="og:title" content="Adwa Najmi — Software Engineer & Laravel Developer">
+  <meta property="og:title" content="Adwa Najmi · Software Engineer & Laravel Developer">
   <meta property="og:description"
-    content="Crafting robust backends and polished interfaces with Laravel & PHP. Explore my enterprise & government systems portfolio.">
+    content="Specializing in enterprise systems, real-time sync pipelines, and web architecture with Laravel & PHP.">
   <meta property="og:image" content="images/Adwa.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Adwa Najmi — Software Engineer">
+  <meta property="twitter:title" content="Adwa Najmi · Software Engineer">
   <meta property="twitter:description"
-    content="Crafting robust backends and polished interfaces with Laravel & PHP.">
+    content="Specializing in enterprise systems, real-time sync pipelines, and web architecture with Laravel & PHP.">
   <meta property="twitter:image" content="images/Adwa.jpg">
 
   <!-- Fonts -->
@@ -41,32 +41,47 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
 
   <link rel="stylesheet" href="css/main.css">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+        var theme = saved || (prefersLight ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
+  </script>
   <script src="js/main.js" defer></script>
 </head>
 
 <body>
 
-  <!-- ===== NAV ===== -->
+  <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">
+      <a href="#hero" class="nav-logo" aria-label="Adwa Najmi Home">
         <span class="logo-bracket">&lt;</span>
         <span class="logo-text">adwa.najmi</span>
         <span class="logo-bracket">/&gt;</span>
       </a>
-      <div class="nav-links">
-        <a href="#about" class="nav-link" data-index="0">// about</a>
-        <a href="#work" class="nav-link" data-index="1">// work</a>
-        <a href="#journey" class="nav-link" data-index="2">// journey</a>
-        <a href="#contact" class="nav-link" data-index="3">// contact</a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#about" class="nav-link" data-index="0">About</a>
+          <a href="#work" class="nav-link" data-index="1">Projects</a>
+          <a href="#journey" class="nav-link" data-index="2">Experience</a>
+          <a href="#contact" class="nav-link" data-index="3">Contact</a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <!-- Hero -->
   <section id="hero">
     <div class="hero-bg-slideshow">
       <div class="hero-slide active" style="background-image: url('images/AdwaJapan.jpg')"></div>
@@ -74,26 +89,16 @@
       <div class="hero-slide" style="background-image: url('images/osaka.jpeg')"></div>
       <div class="hero-slide" style="background-image: url('images/profile.GIF')"></div>
     </div>
-    <div class="hero-grid-bg" id="heroGrid"></div>
 
     <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        <span class="badge-text">Open to opportunities</span>
+      <div class="hero-status">
+        <span class="status-indicator"></span>
+        <span>Available for engineering roles</span>
       </div>
 
-      <div class="hero-terminal">
-        <div class="terminal-bar">
-          <span class="term-dot red"></span>
-          <span class="term-dot yellow"></span>
-          <span class="term-dot green"></span>
-          <span class="term-title">portfolio.sh</span>
-        </div>
-        <div class="terminal-body">
-          <span class="term-prompt">$</span>
-          <span class="term-cmd">whoami</span>
-          <span class="term-cursor">|</span>
-        </div>
+      <div class="hero-specializations">
+        <i class="fas fa-server"></i>
+        <span>Enterprise Systems · Database Architecture · Laravel & PHP</span>
       </div>
 
       <h1 class="hero-title">
@@ -102,25 +107,22 @@
       </h1>
 
       <p class="hero-desc">
-        Software Engineer crafting <span class="highlight-cyan">robust backends</span> and
-        <span class="highlight-magenta">polished interfaces</span>.
-        Laravel · PHP · Web Architecture
+        Software Engineer specializing in enterprise management systems, high-volume database architecture, and full-stack web applications with <strong>Laravel</strong> & <strong>PHP</strong>.
       </p>
 
       <div class="hero-actions">
         <a href="#work" class="btn btn-primary">
-          <span>Explore Work</span>
-          <i class="fas fa-arrow-right"></i>
+          <span>View Selected Projects</span>
         </a>
         <a href="resumes/2026/resume.pdf" target="_blank" class="btn btn-ghost">
           <i class="fas fa-file-alt"></i>
-          <span>Resume</span>
+          <span>Resume (PDF)</span>
         </a>
       </div>
 
       <div class="hero-social">
         <a href="https://github.com/adwanajmi/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.linkedin.com/in/adwanajmi/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         <a href="http://www.wasap.my/601121324249/" target="_blank" aria-label="WhatsApp"><i
             class="fab fa-whatsapp"></i></a>
       </div>
@@ -130,14 +132,9 @@
       <span>Scroll</span>
       <div class="scroll-line"></div>
     </div>
-
-    <!-- Floating blobs -->
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
+  <!-- About Section -->
   <section id="about">
     <div class="section-label">
       <span class="label-num">01</span>
@@ -175,17 +172,16 @@
 
         <div class="about-text">
           <h2 class="section-title">
-            <span class="title-accent">//</span>
             Building digital<br>
             <span class="gradient-text">solutions since 2020</span>
           </h2>
           <p>
             I'm <strong>Adwa Najmi</strong>, a Software Engineer based in Kuala Lumpur, Malaysia.
-            I thrive in challenging technical environments — specializing in full-lifecycle web development from government portals to complex concession scheduling platforms and AI-assisted enterprise toolkits.
+            I thrive in challenging technical environments, specializing in full-lifecycle web development from government portals to complex concession scheduling platforms and enterprise toolkits.
           </p>
           <p>
             My core expertise centers around building scalable web systems using <strong>Laravel</strong>,
-            <strong>PHP</strong>, <strong>MySQL</strong>, and modern JavaScript standards. I focus on clean backend architecture, secure role-based permissions, automated reporting engines, RAG AI integrations, and user interfaces that deliver exceptional performance.
+            <strong>PHP</strong>, <strong>MySQL</strong>, and modern JavaScript standards. I focus on clean backend architecture, secure role-based permissions, automated reporting engines, and user interfaces that deliver exceptional performance.
           </p>
 
           <div class="tech-stack">
@@ -219,7 +215,7 @@
     </div>
   </section>
 
-  <!-- ===== WORK / PORTFOLIO ===== -->
+  <!-- Work Section -->
   <section id="work">
     <div class="section-diagonal"></div>
 
@@ -231,39 +227,38 @@
     <div class="container">
       <div class="work-header">
         <h2 class="section-title">
-          <span class="title-accent">//</span>
           Selected<br>
           <span class="gradient-text">Projects</span>
         </h2>
-        <p class="work-subtitle">Click any card to explore key details and tech architecture.</p>
+        <p class="work-subtitle">Click any card or press Enter to inspect architectural details.</p>
       </div>
 
-      <!-- WORK CATEGORY FILTERS -->
-      <div class="work-filters">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="enterprise">Enterprise & Govt</button>
-        <button class="filter-btn" data-filter="corporate">Corporate Systems</button>
-        <button class="filter-btn" data-filter="mobile">Mobile & Apps</button>
+      <!-- Category Filter Tabs -->
+      <div class="work-filters" role="tablist" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+        <button class="filter-btn" data-filter="enterprise" role="tab" aria-selected="false">Enterprise & Govt</button>
+        <button class="filter-btn" data-filter="corporate" role="tab" aria-selected="false">Corporate Systems</button>
+        <button class="filter-btn" data-filter="mobile" role="tab" aria-selected="false">Mobile & Apps</button>
       </div>
 
       <div class="work-grid">
-        <!-- Bably — Smart Baby Care & Family Tracking -->
-        <div class="work-card" data-category="mobile" onclick="openModal('modal-bably')">
+        <!-- Bably -->
+        <div class="work-card featured" data-category="mobile" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Bably Smart Baby Care details" onclick="openModal('modal-bably')">
           <div class="work-card-bg" style="background-image:url('images/projects/Bably/hero.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
             <span class="work-tag">Smart Web & Mobile App</span>
-            <h3>Bably — Smart Baby Care</h3>
+            <h3>Bably: Smart Baby Care</h3>
             <p>Floating dock UI, sleep tracking analytics, QR family access & daily insight engine</p>
             <div class="work-card-footer">
               <span class="work-tech">Vite · React 19 · Firebase</span>
-              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+              <span class="work-action-hint">View Case Study</span>
             </div>
           </div>
         </div>
 
-        <!-- Kira+ — Tax Relief & Receipt Intelligence -->
-        <div class="work-card" data-category="enterprise" onclick="openModal('modal-kira')">
+        <!-- Kira+ -->
+        <div class="work-card featured" data-category="enterprise" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Kira+ Tax Relief details" onclick="openModal('modal-kira')">
           <div class="work-card-bg" style="background-image:url('images/projects/LHDN/logo.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
@@ -272,88 +267,88 @@
             <p>Automated LHDN tax relief calculator, Vision OCR geometry parser & merchant intelligence</p>
             <div class="work-card-footer">
               <span class="work-tech">Next.js 16 · Supabase · Vision OCR</span>
-              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+              <span class="work-action-hint">View Case Study</span>
             </div>
           </div>
         </div>
 
-        <!-- EMS v2 HR Training & Assessment -->
-        <div class="work-card" data-category="enterprise" onclick="openModal('modal-ems-hrtraining')">
+        <!-- EMS v2 HR Training -->
+        <div class="work-card featured" data-category="enterprise" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View EMS v2 HR Training details" onclick="openModal('modal-ems-hrtraining')">
           <div class="work-card-bg" style="background-image:url('images/projects/SWM/image.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
             <span class="work-tag">Enterprise System</span>
-            <h3>EMS v2 — HR Training & Assessment</h3>
+            <h3>EMS v2: HR Training & Assessment</h3>
             <p>Video checkpoints, staff/contractor tracking, interactive assessments & reporting analytics</p>
             <div class="work-card-footer">
               <span class="work-tech">Laravel · Multi-DB · MySQL</span>
-              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+              <span class="work-action-hint">View Case Study</span>
             </div>
           </div>
         </div>
 
         <!-- EMS v2 Driver Assessment -->
-        <div class="work-card" data-category="enterprise" onclick="openModal('modal-ems-driver')">
+        <div class="work-card featured" data-category="enterprise" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View EMS v2 Driver Assessment details" onclick="openModal('modal-ems-driver')">
           <div class="work-card-bg" style="background-image:url('images/projects/SWM/image.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
             <span class="work-tag">Enterprise System</span>
-            <h3>EMS v2 — Driver Assessment & Evaluation</h3>
+            <h3>EMS v2: Driver Assessment & Evaluation</h3>
             <p>Concession driver evaluation checklists, 2-stage superior reviews & score analytics</p>
             <div class="work-card-footer">
               <span class="work-tech">Laravel · MySQL · Blade</span>
-              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+              <span class="work-action-hint">View Case Study</span>
             </div>
           </div>
         </div>
 
         <!-- EMS v2 Employee Toolkit -->
-        <div class="work-card" data-category="enterprise" onclick="openModal('modal-ems-toolkit')">
+        <div class="work-card featured" data-category="enterprise" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View EMS v2 Employee Toolkit details" onclick="openModal('modal-ems-toolkit')">
           <div class="work-card-bg" style="background-image:url('images/projects/SWM/image.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
             <span class="work-tag">Enterprise System</span>
-            <h3>EMS v2 — Employee Toolkit</h3>
+            <h3>EMS v2: Employee Toolkit</h3>
             <p>SOP document repository, folder tagging, auto-assign rules & staff feedback management</p>
             <div class="work-card-footer">
               <span class="work-tech">Laravel · MySQL · Blade</span>
-              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+              <span class="work-action-hint">View Case Study</span>
             </div>
           </div>
         </div>
 
         <!-- SWM Environment -->
-        <div class="work-card" data-category="enterprise" onclick="openModal('modal-SWM')">
+        <div class="work-card featured" data-category="enterprise" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View EMS v1 Schedule Management details" onclick="openModal('modal-SWM')">
           <div class="work-card-bg" style="background-image:url('images/projects/SWM/image.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
             <span class="work-tag">Enterprise System</span>
-            <h3>EMS v1 - Schedule Management</h3>
-            <p>Internal system & contractor portal</p>
+            <h3>EMS v1: Schedule Management</h3>
+            <p>Concession schedule management and contractor portal</p>
             <div class="work-card-footer">
               <span class="work-tech">Laravel · MySQL</span>
-              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+              <span class="work-action-hint">View Case Study</span>
             </div>
           </div>
         </div>
 
         <!-- iJadual SwCorp -->
-        <div class="work-card" data-category="enterprise" onclick="openModal('modal-iJadual')">
+        <div class="work-card" data-category="enterprise" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View iJadual SWCorp details" onclick="openModal('modal-iJadual')">
           <div class="work-card-bg" style="background-image:url('images/projects/SWM/iJadual/swcorp.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
             <span class="work-tag">Govt Concession</span>
-            <h3>iJadual SwCorp</h3>
+            <h3>iJadual SWCorp</h3>
             <p>Scheduling system for SWCorp Malaysia</p>
             <div class="work-card-footer">
               <span class="work-tech">Laravel · PHP</span>
-              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+              <span class="work-action-hint">View Case Study</span>
             </div>
           </div>
         </div>
 
         <!-- Gogolf -->
-        <div class="work-card" data-category="mobile" onclick="openModal('modal-gogolf')">
+        <div class="work-card" data-category="mobile" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Gogolf details" onclick="openModal('modal-gogolf')">
           <div class="work-card-bg" style="background-image:url('images/projects/Degree/Gogolf/gogolf.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
@@ -362,13 +357,13 @@
             <p>Booking system for Kelab Darul Ehsan</p>
             <div class="work-card-footer">
               <span class="work-tech">Ionic · Angular</span>
-              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+              <span class="work-action-hint">View Case Study</span>
             </div>
           </div>
         </div>
 
         <!-- TNB Genco Academy -->
-        <div class="work-card" data-category="corporate" onclick="openModal('modal-tnb')">
+        <div class="work-card" data-category="corporate" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View TNB Genco Academy details" onclick="openModal('modal-tnb')">
           <div class="work-card-bg" style="background-image:url('images/projects/Degree/tnb.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
@@ -377,13 +372,13 @@
             <p>Corporate LMS platform</p>
             <div class="work-card-footer">
               <span class="work-tech">Laravel · PHP</span>
-              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+              <span class="work-action-hint">View Case Study</span>
             </div>
           </div>
         </div>
 
         <!-- MBPJ E-Sistem -->
-        <div class="work-card" data-category="enterprise" onclick="openModal('modal-mbpj')">
+        <div class="work-card" data-category="enterprise" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View MBPJ E-Sistem details" onclick="openModal('modal-mbpj')">
           <div class="work-card-bg" style="background-image:url('images/projects/MBPJ/mbpj.jpeg')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
@@ -392,13 +387,13 @@
             <p>Municipal collection prototype system</p>
             <div class="work-card-footer">
               <span class="work-tech">Laravel</span>
-              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+              <span class="work-action-hint">View Case Study</span>
             </div>
           </div>
         </div>
 
         <!-- MAIWP System -->
-        <div class="work-card" data-category="enterprise" onclick="openModal('modal-maiwp')">
+        <div class="work-card" data-category="enterprise" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View MAIWP System details" onclick="openModal('modal-maiwp')">
           <div class="work-card-bg" style="background-image:url('images/projects/MAIWP/maiwp.jpeg')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
@@ -407,13 +402,13 @@
             <p>Resource management system</p>
             <div class="work-card-footer">
               <span class="work-tech">Laravel</span>
-              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+              <span class="work-action-hint">View Case Study</span>
             </div>
           </div>
         </div>
 
         <!-- eMAS RMK12 -->
-        <div class="work-card" data-category="enterprise" onclick="openModal('modal-emas')">
+        <div class="work-card" data-category="enterprise" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View eMAS RMK12 details" onclick="openModal('modal-emas')">
           <div class="work-card-bg" style="background-image:url('images/projects/eMAS/emas.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
@@ -422,13 +417,13 @@
             <p>Government reporting system</p>
             <div class="work-card-footer">
               <span class="work-tech">Laravel · MySQL</span>
-              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+              <span class="work-action-hint">View Case Study</span>
             </div>
           </div>
         </div>
 
         <!-- Gym Management -->
-        <div class="work-card" data-category="mobile" onclick="openModal('modal-gym')">
+        <div class="work-card" data-category="mobile" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Gym Management details" onclick="openModal('modal-gym')">
           <div class="work-card-bg" style="background-image:url('images/projects/Diploma/gym.webp')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
@@ -437,13 +432,13 @@
             <p>Membership & attendance system</p>
             <div class="work-card-footer">
               <span class="work-tech">HTML · CSS</span>
-              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+              <span class="work-action-hint">View Case Study</span>
             </div>
           </div>
         </div>
 
         <!-- MM2H -->
-        <div class="work-card" data-category="mobile" onclick="openModal('modal-mm2h')">
+        <div class="work-card" data-category="mobile" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Malaysia My Second Home details" onclick="openModal('modal-mm2h')">
           <div class="work-card-bg" style="background-image:url('images/projects/Diploma/Internship/mm2h.png')"></div>
           <div class="work-card-overlay"></div>
           <div class="work-card-content">
@@ -452,7 +447,7 @@
             <p>Website maintenance</p>
             <div class="work-card-footer">
               <span class="work-tech">WordPress</span>
-              <span class="work-arrow"><i class="fas fa-arrow-right"></i></span>
+              <span class="work-action-hint">View Case Study</span>
             </div>
           </div>
         </div>
@@ -460,7 +455,7 @@
     </div>
   </section>
 
-  <!-- ===== JOURNEY / RESUME ===== -->
+  <!-- Journey Section -->
   <section id="journey">
     <div class="section-label">
       <span class="label-num">03</span>
@@ -469,7 +464,6 @@
 
     <div class="container">
       <h2 class="section-title">
-        <span class="title-accent">//</span>
         The path<br>
         <span class="gradient-text">so far</span>
       </h2>
@@ -481,7 +475,7 @@
             <div class="marker-line"></div>
           </div>
           <div class="journey-card">
-            <div class="journey-period">Mar 2023 — Present</div>
+            <div class="journey-period">Mar 2023 to Present</div>
             <h3>Software Engineer</h3>
             <div class="journey-company">SWM Environment Sdn Bhd</div>
             <p>Architecting enterprise web solutions, HR modules, and Rymnet sync pipelines for SWCorp Malaysia.</p>
@@ -499,7 +493,7 @@
             <div class="marker-line"></div>
           </div>
           <div class="journey-card">
-            <div class="journey-period">Jan 2022 — Feb 2023</div>
+            <div class="journey-period">Jan 2022 to Feb 2023</div>
             <h3>Software Developer</h3>
             <div class="journey-company">Pipeline Network Sdn Bhd</div>
             <p>Focused on rapid prototyping and government projects.</p>
@@ -517,7 +511,7 @@
             <div class="marker-line"></div>
           </div>
           <div class="journey-card">
-            <div class="journey-period">Jan 2021 — May 2021</div>
+            <div class="journey-period">Jan 2021 to May 2021</div>
             <h3>IT Technical Sales Executive</h3>
             <div class="journey-company">Qowi Global Sdn Bhd</div>
             <ul>
@@ -533,7 +527,7 @@
             <div class="marker-dot"></div>
           </div>
           <div class="journey-card">
-            <div class="journey-period">Mar 2020 — Nov 2020</div>
+            <div class="journey-period">Mar 2020 to Nov 2020</div>
             <h3>Web Developer Intern</h3>
             <div class="journey-company">TNB Headquarters</div>
             <ul>
@@ -546,7 +540,7 @@
       </div>
 
       <div class="journey-cta">
-        <p>Want the full story?</p>
+        <p>Want the full career history and credentials?</p>
         <a href="resumes/2026/resume.pdf" target="_blank" class="btn btn-primary">
           <i class="fas fa-download"></i>
           <span>Download Resume</span>
@@ -555,7 +549,7 @@
     </div>
   </section>
 
-  <!-- ===== CONTACT / FOOTER ===== -->
+  <!-- Contact Section -->
   <section id="contact">
     <div class="section-diagonal"></div>
 
@@ -568,12 +562,11 @@
       <div class="contact-grid">
         <div class="contact-text">
           <h2 class="section-title">
-            <span class="title-accent">//</span>
             Let's build<br>
             <span class="gradient-text">something</span><br>
             together.
           </h2>
-          <p>I'm always open to discussing new projects, backend solutions, or full-time opportunities.</p>
+          <p>I am open to discussing new projects, enterprise backend solutions, or full-time opportunities.</p>
           <a href="mailto:adwaaa@live.com" class="contact-email">
             <span class="email-prefix">say hello at</span>
             <span class="email-addr">adwaaa@live.com</span>
@@ -581,17 +574,17 @@
         </div>
 
         <div class="contact-links">
-          <a href="https://github.com/adwanajmi/" target="_blank" class="contact-link">
+          <a href="https://github.com/adwanajmi/" target="_blank" class="contact-link" aria-label="Adwa Najmi GitHub Profile">
             <i class="fab fa-github"></i>
             <span>GitHub</span>
             <i class="fas fa-arrow-up-right-from-square"></i>
           </a>
-          <a href="https://www.linkedin.com/" target="_blank" class="contact-link">
+          <a href="https://www.linkedin.com/in/adwanajmi/" target="_blank" class="contact-link" aria-label="Adwa Najmi LinkedIn Profile">
             <i class="fab fa-linkedin-in"></i>
             <span>LinkedIn</span>
             <i class="fas fa-arrow-up-right-from-square"></i>
           </a>
-          <a href="http://www.wasap.my/601121324249/" target="_blank" class="contact-link">
+          <a href="http://www.wasap.my/601121324249/" target="_blank" class="contact-link" aria-label="Contact via WhatsApp">
             <i class="fab fa-whatsapp"></i>
             <span>WhatsApp</span>
             <i class="fas fa-arrow-up-right-from-square"></i>
@@ -604,7 +597,7 @@
       <div class="container">
         <div class="footer-inner">
           <span class="footer-copy">&copy; 2026 Adwa Najmi</span>
-          <span class="footer-tag">Built with Laravel spirit &lt;/&gt;</span>
+          <span class="footer-tag">Crafted with Laravel spirit &lt;/&gt;</span>
         </div>
       </div>
     </footer>
@@ -626,14 +619,14 @@
         <img src="images/projects/Bably/dashboard.png" class="modal-media" alt="Bably Mobile App Interface">
       </div>
       <div class="modal-info">
-        <h2>Bably — Smart Baby Care & Family Tracking Platform</h2>
+        <h2>Bably: Smart Baby Care & Family Tracking Platform</h2>
         <p>A modern, responsive baby activity logger, sleep metrics visualizer, and multi-user family tracking system built with Vite, React 19, and Firebase.</p>
 
         <div class="modal-details-grid">
           <div>
-            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <div class="modal-section-title">Key Architecture & Contributions</div>
             <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
-              <li>Designed a floating dock bottom navigation and sleek glassmorphic responsive UI using Framer Motion.</li>
+              <li>Designed a floating dock bottom navigation and sleek responsive UI using Framer Motion.</li>
               <li>Integrated Firebase Authentication, Firestore real-time DB, and Firebase Storage rules for multi-device sync.</li>
               <li>Engineered a QR Scanner & Generator module for instant child profile onboarding and role-based access.</li>
               <li>Built an AI-assisted daily insight engine with cherry blossom themes and personalized report summaries.</li>
@@ -671,12 +664,12 @@
         <img src="images/projects/KiraPlus/wallets.png" class="modal-media" alt="Kira+ Multi-Wallet Balance & Asset Allocation">
       </div>
       <div class="modal-info">
-        <h2>Kira+ — Tax Relief & Receipt Intelligence System</h2>
+        <h2>Kira+: Tax Relief & Receipt Intelligence System</h2>
         <p>Personal finance tracking platform and automated tax relief engine compliant with LHDN Malaysia tax categories and limits.</p>
 
         <div class="modal-details-grid">
           <div>
-            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <div class="modal-section-title">Key Architecture & Contributions</div>
             <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
               <li>Implemented Google Vision API OCR geometry reconstruction algorithm to pair scrambled receipt text with itemized amounts.</li>
               <li>Engineered real-time LHDN tax relief calculation engine tracking claim limits across personal, medical, and lifestyle categories.</li>
@@ -697,7 +690,7 @@
 
         <div class="modal-meta" style="margin-top:1.5rem;">
           <span><strong>Category:</strong> Finance & AI System</span>
-          <span><strong>Year:</strong> 2025 — 2026</span>
+          <span><strong>Year:</strong> 2025 to 2026</span>
           <span><strong>GitHub:</strong> <a href="https://github.com/adwanajmi/lhdn-tracker" target="_blank" style="color:var(--cyan); text-decoration:underline;">adwanajmi/lhdn-tracker</a></span>
         </div>
       </div>
@@ -718,12 +711,12 @@
         <img src="images/projects/SWM/hr_training/assessment_report.png" class="modal-media" alt="Assessment Analytics & Attempt Reports">
       </div>
       <div class="modal-info">
-        <h2>EMS v2 — HR Training & Interactive Assessment System</h2>
+        <h2>EMS v2: HR Training & Interactive Assessment System</h2>
         <p>Comprehensive training development, interactive assessment grading, and analytics platform engineered for SWM Environment staff and concession contractors.</p>
 
         <div class="modal-details-grid">
           <div>
-            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <div class="modal-section-title">Key Architecture & Contributions</div>
             <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
               <li>Dedicated multi-database architecture utilizing <code>mysqlHRTraining</code> database connection.</li>
               <li>Develop Training module supporting course video material and internal staff / contractor assignment logs.</li>
@@ -764,12 +757,12 @@
         <img src="images/projects/SWM/driver_assessment/result.png" class="modal-media" alt="Evaluation Result & Digital Signatures">
       </div>
       <div class="modal-info">
-        <h2>EMS v2 — Driver Assessment & Evaluation System</h2>
+        <h2>EMS v2: Driver Assessment & Evaluation System</h2>
         <p>Standardized driver evaluation and compliance verification platform engineered for concession operations, fleet driver safety assessments, and superior review workflows.</p>
 
         <div class="modal-details-grid">
           <div>
-            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <div class="modal-section-title">Key Architecture & Contributions</div>
             <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
               <li>Standardized driver checklist builder supporting custom passing scores (e.g., 70%-80%), attempt limits, and dynamic question sets.</li>
               <li>Evaluation Submissions Center with dedicated multi-role views for assessors, superiors, and HR administrators.</li>
@@ -806,12 +799,12 @@
         <img src="images/projects/SWM/toolkit/dashboard.png" class="modal-media" alt="Admin Toolkit Dashboard">
       </div>
       <div class="modal-info">
-        <h2>EMS v2 — Employee Toolkit & SOP Management Hub</h2>
+        <h2>EMS v2: Employee Toolkit & SOP Management Hub</h2>
         <p>Enterprise document management repository and knowledge hub integrated into the SWM Environment Mirror System for SOPs, company policies, and training resources.</p>
 
         <div class="modal-details-grid">
           <div>
-            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <div class="modal-section-title">Key Architecture & Contributions</div>
             <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
               <li>Centralized enterprise document repository supporting PDFs, policies, SOPs, and training media.</li>
               <li>Embedded document previewer with bookmarking, download management, and staff feedback rating handlers.</li>
@@ -858,7 +851,7 @@
         
         <div class="modal-details-grid">
           <div>
-            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <div class="modal-section-title">Key Architecture & Contributions</div>
             <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
               <li>Engineered schedule mirroring and automated validation routines.</li>
               <li>Built multi-role contractor workflows for task submission and approval.</li>
@@ -896,7 +889,7 @@
 
         <div class="modal-details-grid">
           <div>
-            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <div class="modal-section-title">Key Architecture & Contributions</div>
             <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
               <li>Maintained core scheduling module handling statewide concession data.</li>
               <li>Conducted systematic QA manual testing, defect reporting, and fix validations.</li>
@@ -937,7 +930,7 @@
 
         <div class="modal-details-grid">
           <div>
-            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <div class="modal-section-title">Key Architecture & Contributions</div>
             <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
               <li>Developed mobile booking UI using Ionic framework & Angular.</li>
               <li>Integrated slot availability calendar and booking confirmation flows.</li>
@@ -977,7 +970,7 @@
 
         <div class="modal-details-grid">
           <div>
-            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <div class="modal-section-title">Key Architecture & Contributions</div>
             <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
               <li>Built course catalog, staff training registration, and department tracking modules.</li>
               <li>Implemented admin dashboards for managing learning materials and users.</li>
@@ -1015,7 +1008,7 @@
 
         <div class="modal-details-grid">
           <div>
-            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <div class="modal-section-title">Key Architecture & Contributions</div>
             <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
               <li>Rapidly prototyped municipal collection modules and interactive dashboards.</li>
               <li>Demonstrated interactive user flows to municipal council stakeholders.</li>
@@ -1052,7 +1045,7 @@
 
         <div class="modal-details-grid">
           <div>
-            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <div class="modal-section-title">Key Architecture & Contributions</div>
             <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
               <li>Prototyped resource request and inventory management workflows.</li>
               <li>Engineered clean Blade view components and database relations.</li>
@@ -1089,7 +1082,7 @@
 
         <div class="modal-details-grid">
           <div>
-            <div class="modal-section-title">// Key Architecture & Contributions</div>
+            <div class="modal-section-title">Key Architecture & Contributions</div>
             <ul style="padding-left:1.5rem; line-height:1.6; opacity:0.9;">
               <li>Designed and executed full Laravel backend structure and reporting database.</li>
               <li>Implemented data entry forms, progress indicators, and dynamic summaries.</li>
